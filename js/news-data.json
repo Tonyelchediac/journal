@@ -1,0 +1,94 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "Lebanon's Economic Recovery Plan",
+      "summary": "Latest updates on the country's financial reforms and international support...",
+      "content": "Lebanon's government has announced a comprehensive economic recovery plan aimed at stabilizing the country's financial sector. The plan includes significant reforms to the banking system, restructuring of public debt, and implementation of new fiscal policies. International partners, including the World Bank and IMF, have expressed cautious optimism about the proposed measures. The recovery plan focuses on three main pillars: financial sector reform, fiscal consolidation, and structural reforms to improve governance and transparency. Key measures include bank recapitalization, deposit protection for small savers, and the establishment of a new financial regulatory framework. The government expects these reforms to restore confidence in the Lebanese pound and attract foreign investment.",
+      "image": "https://tse3.mm.bing.net/th/id/OIP.swQUP5C17yWCldC4U20OYAHaFS?pid=Api&P=0&h=220",
+      "category": "economics",
+      "date": "2024-01-15"
+        },
+        {
+      "id": 2,
+      "title": "Tech Innovations in 2024",
+      "summary": "A look at the most promising technology trends shaping the year...",
+      "content": "The technology sector is witnessing rapid advancements in artificial intelligence, quantum computing, and green energy solutions. Major companies are investing in research and development to stay ahead in the competitive market. Experts predict that AI-driven automation and sustainable tech will dominate the industry landscape in 2024.",
+      "image": "https://www.google.com/search?tbm=isch&q=Tech+Innovations+2024",
+      "category": "technology",
+      "date": "2024-02-10"
+        },
+        {
+      "id": 3,
+      "title": "Global Climate Change Conference",
+      "summary": "World leaders gather to discuss urgent climate action...",
+      "content": "The annual Global Climate Change Conference brought together leaders from over 100 countries to address the escalating climate crisis. Key topics included carbon emissions reduction, renewable energy adoption, and international cooperation. The conference concluded with a renewed commitment to the Paris Agreement.",
+      "image": "https://www.google.com/search?tbm=isch&q=Global+Climate+Change+Conference",
+      "category": "environment",
+      "date": "2024-03-05"
+        },
+        {
+      "id": 4,
+      "title": "Breakthrough in Cancer Research",
+      "summary": "Scientists announce a major breakthrough in cancer treatment...",
+      "content": "A team of international researchers has developed a new therapy that significantly improves survival rates for certain types of cancer. The treatment, which targets cancer cells at the molecular level, has shown promising results in clinical trials and is expected to be available to patients soon.",
+      "image": "https://www.google.com/search?tbm=isch&q=Breakthrough+in+Cancer+Research",
+      "category": "health",
+      "date": "2024-04-12"
+        },
+        {
+      "id": 5,
+      "title": "Global Markets Rally",
+      "summary": "Stock markets around the world see significant gains...",
+      "content": "Global stock markets rallied this week as investors responded positively to strong corporate earnings and easing inflation concerns. Analysts believe that the upward trend may continue if economic indicators remain favorable.",
+      "image": "https://www.google.com/search?tbm=isch&q=Global+Markets+Rally",
+      "category": "business",
+      "date": "2024-05-20"
+        },
+        {
+      "id": 6,
+      "title": "Historic Peace Agreement Signed",
+      "summary": "Two nations sign a historic peace agreement after decades of conflict...",
+      "content": "In a landmark event, leaders from two neighboring countries signed a peace agreement, ending years of hostilities. The agreement includes provisions for border security, economic cooperation, and cultural exchange programs.",
+      "image": "https://www.google.com/search?tbm=isch&q=Historic+Peace+Agreement+Signed",
+      "category": "world",
+      "date": "2024-06-01"
+        },
+        {
+      "id": 7,
+      "title": "Advances in Renewable Energy",
+      "summary": "New technologies are making renewable energy more accessible...",
+      "content": "Innovations in solar and wind power are driving down costs and increasing efficiency. Governments and private companies are investing heavily in renewable infrastructure to meet climate goals and reduce reliance on fossil fuels.",
+      "image": "https://www.google.com/search?tbm=isch&q=Advances+in+Renewable+Energy",
+      "category": "science",
+      "date": "2024-06-15"
+        },
+        {
+      "id": 8,
+      "title": "Major Sports Event Highlights",
+      "summary": "A recap of the most exciting moments from this year's major sports events...",
+      "content": "Fans around the world enjoyed thrilling matches and record-breaking performances at this year's major sports events. Highlights include unexpected upsets, new champions, and memorable moments that will go down in history.",
+      "image": "https://www.google.com/search?tbm=isch&q=Major+Sports+Event+Highlights",
+      "category": "sports",
+      "date": "2024-07-10"
+        },
+        {
+      "id": 9,
+      "title": "Breakthroughs in Space Exploration",
+      "summary": "New missions and discoveries expand our understanding of the universe...",
+      "content": "Space agencies have launched several new missions to explore distant planets and moons. Recent discoveries include evidence of water on Mars and new insights into the formation of galaxies.",
+      "image": "https://www.google.com/search?tbm=isch&q=Breakthroughs+in+Space+Exploration",
+      "category": "space",
+      "date": "2024-08-05"
+        },
+        {
+      "id": 10,
+      "title": "Education Reform Initiatives",
+      "summary": "Governments introduce new policies to improve education systems...",
+      "content": "Several countries have announced major education reform initiatives aimed at improving access, quality, and equity in education. The reforms focus on teacher training, curriculum updates, and increased funding for schools.",
+      "image": "https://www.google.com/search?tbm=isch&q=Education+Reform+Initiatives",
+      "category": "education",
+      "date": "2024-09-01"
+        }
+  ]
+}
