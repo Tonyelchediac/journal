@@ -16,20 +16,23 @@
 
 <body>
 
-    <header>
-        <h1 class="header-title">The Lebanon Times</h1>
-        <nav>
-            <ul>
-                <li><a href="#all" class="active">All</a></li>
-                <li><a href="#news">News</a></li>
-                <li><a href="#politics">Politics</a></li>
-                <li><a href="#technology">Technology</a></li>
-                <li><a href="#sports">Sports</a></li>
-                <li><a href="#business">Business</a></li>
-            </ul>
-        </nav>
-    </header>
-
+  <header>
+    <h1 class="header-title">The Lebanon Times</h1>
+    <nav>
+      <ul id="nav-list">
+        <li><a href="#all" class="active">All</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#politics">Politics</a></li>
+        <li><a href="#technology">Technology</a></li>
+        <li><a href="#sports">Sports</a></li>
+        <li><a href="#business">Business</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+  
 <main>
 
     <!-- home section -->
@@ -44,9 +47,13 @@
             </div>
 
             <div class="home-right-side">
-                <h2 class="title">breaking News</h2>
-                <div class="breaking-news">
 
+                <div class="titles-and-live">
+                    <h2 class="title">breaking News</h2>
+                    <span class="live"></span>
+                </div>
+
+                <div class="breaking-news">
                     <div class="new">
                         <h2>Lebanon Launches New Tech Hub in Beirut</h2>
                         <p class="date"><i class="fas fa-calendar"></i> April 2, 2024</p>
