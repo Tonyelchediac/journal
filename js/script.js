@@ -6,4 +6,9 @@
       navList.classList.toggle('show');
     });
 
+    // date
+    const date = new Date();
+    const options = { weekday: 'long', month: 'short', day: 'numeric', year: 'numeric' };
+    document.querySelector('.to-day').textContent = date.toLocaleDateString('en-US', options);
+
 

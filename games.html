@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- title -->
+    <title>The Batroun Times</title>
+    <!-- js -->
+    <script src="js/script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+
+        body {
+            background: var(--main-background-color);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: var(--color-primary);
+        }
+
+        main{
+            padding: 30px;
+        }
+
+        .games-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin: 40px 0;
+            max-width: 1500px;
+        }
+
+        .game-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(44, 62, 80, 0.08);
+            padding: 32px 24px;
+            width: clamp(350px, 90%, 600px);
+            min-height: 420px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: box-shadow 0.2s;
+        }
+
+        .game-card:hover {
+            box-shadow: 0 8px 32px rgba(44, 62, 80, 0.16);
+        }
+
+        .game-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 18px;
+            color: #3b4a5a;
+            text-align: center;
+        }
+
+        .game-area {
+            width: 100%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn,
+        input[type="text"],
+        input[type="number"] {
+            padding: 8px 16px;
+            border-radius: 6px;
+            border: 1px solid #bfc9d1;
+            font-size: 1rem;
+            width: 100%;
+            margin: 6px 0;
+            outline: none;
+            transition: border 0.2s;
+        }
+
+        .result,
+        .message {
+            margin-top: 12px;
+            font-size: 1.1rem;
+            min-height: 24px;
+            color: #2d7ff9;
+            text-align: center;
+        }
+
+        .board {
+            display: grid;
+            grid-template-columns: repeat(3, 60px);
+            grid-gap: 8px;
+            margin: 16px 0;
+        }
+
+        .cell {
+            width: 60px;
+            height: 60px;
+            background: #eaf0fa;
+            border-radius: 8px;
+            font-size: 2rem;
+            color: #2d7ff9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            user-select: none;
+            transition: background 0.2s;
+        }
+
+        .cell:hover {
+            background: #d0e2ff;
+        }
+
+        @media (max-width: 1100px) {
+            .games-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+    <div class="header-container">
+        <h1 class="header-title">The Batroun Times</h1>
+        <nav>
+        <ul id="nav-list">
+            <li><a href="index.html" class="active">News</a></li>
+            <li><a href="">World News</a></li>
+            <li><a href="">Politics</a></li>
+            <li><a href="">Economy</a></li>
+            <li><a href="">Articles</a></li>
+            <li><a href="">Official Ads</a></li>
+            <li><a href="">Sport</a></li>
+            <li><a href="">Technology</a></li>
+            <li><a href="">Lifestyle</a></li>
+            <li><a href="">Health and Science</a></li>
+            <li><a href="">Sale or Rent</a></li>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="">Education and Culture</a></li>
+            <li><a href="">Variety News</a></li>
+        </ul>
+        </nav>
+        <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+        </div>
+    </div>
+    <div class="date-and-subscription">
+        <p class="to-day"></p>
+        <button class="subcsription-button">subscription to more content</button>
+    </div>
+  </header>
+<main>
+    <h1 class="title">Journal Games</h1>
+    <div class="games-container">
+        <!-- Game 1: Number Guessing -->
+        <div class="game-card">
+            <div class="game-title">Number Guessing</div>
+            <div class="game-area" id="guess-game">
+                <p>Guess a number between 1 and 100.</p>
+                <input type="number" id="guess-input" min="1" max="100" placeholder="Enter your guess">
+                <button class="btn" onclick="checkGuess()">Guess</button>
+                <div class="result" id="guess-result"></div>
+                <button onclick="resetGuessGame()" style="margin-top:8px;">Restart</button>
+            </div>
+        </div>
+        <!-- Game 2: Rock Paper Scissors -->
+        <div class="game-card">
+            <div class="game-title">Rock Paper Scissors</div>
+            <div class="game-area" id="rps-game">
+                <p>Choose your move:</p>
+                <div>
+                    <button class="btn" onclick="playRPS('rock')">Rock</button>
+                    <button class="btn" onclick="playRPS('paper')">Paper</button>
+                    <button class="btn" onclick="playRPS('scissors')">Scissors</button>
+                </div>
+                <div class="result" id="rps-result"></div>
+                <button onclick="resetRPS()" style="margin-top:8px;">Restart</button>
+            </div>
+        </div>
+        <!-- Game 3: Tic Tac Toe -->
+        <div class="game-card">
+            <div class="game-title">Tic Tac Toe</div>
+            <div class="game-area" id="ttt-game">
+                <div class="board" id="ttt-board"></div>
+                <div class="message" id="ttt-message"></div>
+                <button  onclick="resetTTT()" style="margin-top:8px;">Restart</button>
+            </div>
+        </div>
+    </div>
+</main>
+    <script>
+        // Game 1: Number Guessing
+        let secretNumber = Math.floor(Math.random() * 100) + 1;
+        let guessTries = 0;
+        function checkGuess() {
+            const input = document.getElementById('guess-input');
+            const result = document.getElementById('guess-result');
+            const guess = Number(input.value);
+            guessTries++;
+            if (!guess || guess < 1 || guess > 100) {
+                result.textContent = "Enter a valid number (1-100).";
+                return;
+            }
+            if (guess === secretNumber) {
+                result.textContent = `🎉 Correct! You guessed in ${guessTries} tries.`;
+                input.disabled = true;
+            } else if (guess < secretNumber) {
+                result.textContent = "Too low!";
+            } else {
+                result.textContent = "Too high!";
+            }
+        }
+        function resetGuessGame() {
+            secretNumber = Math.floor(Math.random() * 100) + 1;
+            guessTries = 0;
+            document.getElementById('guess-input').value = '';
+            document.getElementById('guess-input').disabled = false;
+            document.getElementById('guess-result').textContent = '';
+        }
+
+        // Game 2: Rock Paper Scissors
+        function playRPS(userMove) {
+            const moves = ['rock', 'paper', 'scissors'];
+            const compMove = moves[Math.floor(Math.random() * 3)];
+            let result = '';
+            if (userMove === compMove) {
+                result = `It's a draw! Both chose ${userMove}.`;
+            } else if (
+                (userMove === 'rock' && compMove === 'scissors') ||
+                (userMove === 'paper' && compMove === 'rock') ||
+                (userMove === 'scissors' && compMove === 'paper')
+            ) {
+                result = `You win! ${userMove} beats ${compMove}.`;
+            } else {
+                result = `You lose! ${compMove} beats ${userMove}.`;
+            }
+            document.getElementById('rps-result').textContent = result;
+        }
+        function resetRPS() {
+            document.getElementById('rps-result').textContent = '';
+        }
+
+        // Game 3: Tic Tac Toe (You vs Computer)
+        let tttBoard = Array(9).fill('');
+        let tttGameOver = false;
+        function renderTTT() {
+            const boardDiv = document.getElementById('ttt-board');
+            boardDiv.innerHTML = '';
+            tttBoard.forEach((cell, idx) => {
+                const cellDiv = document.createElement('div');
+                cellDiv.className = 'cell';
+                cellDiv.textContent = cell;
+                cellDiv.onclick = () => playerMove(idx);
+                if (cell || tttGameOver) cellDiv.style.pointerEvents = 'none';
+                boardDiv.appendChild(cellDiv);
+            });
+        }
+        function playerMove(idx) {
+            if (tttBoard[idx] || tttGameOver) return;
+            tttBoard[idx] = 'X';
+            renderTTT();
+            if (checkTTTWin('X')) {
+                endTTT('You win! 🎉');
+                return;
+            }
+            if (tttBoard.every(cell => cell)) {
+                endTTT("It's a draw!");
+                return;
+            }
+            setTimeout(computerMove, 400);
+        }
+        function computerMove() {
+            // Simple AI: pick random empty cell
+            let empty = tttBoard.map((v, i) => v === '' ? i : null).filter(i => i !== null);
+            if (empty.length === 0) return;
+            let idx = empty[Math.floor(Math.random() * empty.length)];
+            tttBoard[idx] = 'O';
+            renderTTT();
+            if (checkTTTWin('O')) {
+                endTTT('Computer wins!');
+                return;
+            }
+            if (tttBoard.every(cell => cell)) {
+                endTTT("It's a draw!");
+            }
+        }
+        function checkTTTWin(player) {
+            const wins = [
+                [0, 1, 2], [3, 4, 5], [6, 7, 8],
+                [0, 3, 6], [1, 4, 7], [2, 5, 8],
+                [0, 4, 8], [2, 4, 6]
+            ];
+            return wins.some(line => line.every(i => tttBoard[i] === player));
+        }
+        function endTTT(msg) {
+            tttGameOver = true;
+            document.getElementById('ttt-message').textContent = msg;
+            renderTTT();
+        }
+        function resetTTT() {
+            tttBoard = Array(9).fill('');
+            tttGameOver = false;
+            document.getElementById('ttt-message').textContent = '';
+            renderTTT();
+        }
+        // Initial render
+        renderTTT();
+    </script>
+</body>
+
+</html>
