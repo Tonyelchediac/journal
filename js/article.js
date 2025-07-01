@@ -71,7 +71,7 @@ function loadBreakingNews(articles) {
     const breakingNewsContainer = document.querySelector('.breaking-news');
     if (!breakingNewsContainer) return;
     breakingNewsContainer.innerHTML = '';
-    const breakingNewsArticles = articles.slice(0, 20);
+    const breakingNewsArticles = articles.slice(0, 10);
     breakingNewsArticles.forEach(article => {
         const newsItem = document.createElement('a');
         newsItem.href = `article.html?id=${article.id}`;
