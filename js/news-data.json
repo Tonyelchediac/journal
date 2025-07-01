@@ -1,112 +1,404 @@
 {
   "articles": [
-   {
-      "id": 12,
-      "title": "What is the relation between Lebanon and Israel ?",
-      "summary": "Latest updates on the country's financial reforms and international support...",
-      "content": "Lebanon's government has announced a comprehensive economic recovery plan aimed at stabilizing the country's financial sector. The plan includes significant reforms to the banking system, restructuring of public debt, and implementation of new fiscal policies. International partners, including the World Bank and IMF, have expressed cautious optimism about the proposed measures. The recovery plan focuses on three main pillars: financial sector reform, fiscal consolidation, and structural reforms to improve governance and transparency. Key measures include bank recapitalization, deposit protection for small savers, and the establishment of a new financial regulatory framework. The government expects these reforms to restore confidence in the Lebanese pound and attract foreign investment.",
-      "image": "https://tse4.mm.bing.net/th?id=OIF.OvnJcm%2f33W8TsxiT7Gj0%2bw&pid=Api&P=0&h=220",
+    {
+      "id": 40,
+      "title": "Batroun Mini Football Villages 2025",
+      "summary": "The Youth Office of the Lebanese Forces Coordination Office in Batroun is honored to invite you to participate in the \"Minifootball Villages\" tournament for the summer of 2025.",
+      "content": "The Youth Office of the Lebanese Forces Coordination Office in Batroun is honored to invite you to participate in the \"Minifootball Villages\" tournament for the summer of 2025. \n Venue: Asia Sports Club. \n Time: Starts August 3rd and ends August 23rd. \n Age Group: Open. \n Participation Fee: $100. \n Prizes: $1,000 for first place, $300 for second place. \n\n The draw will take place on the evening of July 25th at 6:00 PM at the Batroun Coordination Office. For registration or inquiries, call 79166033.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLVYagfuDASSz7dEuzpnW8BglmB7PpjhNuJA&usqp=CAU",
+      "video": "https://example.com/video40.mp4",
+      "category": "sport",
+      "date": "2024-01-01"
+    },
+    {
+      "id": 39,
+      "title": "The body of the Iraqi youth was found!",
+      "summary": "The body of the Iraqi youth who drowned yesterday off the coast of Batroun district was found.",
+      "content": "The body of a young man who had been missing since yesterday was found off the coast of Madfoun, Batroun, near a Lebanese Army checkpoint. Four people drowned yesterday. Civil Defense teams were able to rescue three of them at the time, while the search for the fourth person continues today. The body was found with the participation of Civil Defense teams and a number of local youth, in addition to the \"JET SKI ARAKO\" team in the area, who, along with Civil Defense personnel, contributed to the ongoing search until the body was found, according to the \"Akhbar Al-Sa'a\" website. The drowned man was identified as \"A. A. H.\", an Iraqi national born in 2006. The body was transferred to Batroun Hospital for necessary legal action.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyqnRLOFS2MQs2fqTA_MyMQ3cWw8at7ChSMA&usqp=CAU",
+      "video": "https://example.com/video39.mp4",
       "category": "news",
-      "date": "7-1-2025"
-        },
+      "date": "2024-01-02"
+    },
+    {
+      "id": 38,
+      "title": "Musk call Lebanese President Aoun!",
+      "summary": "A call happened between Elon Musk and Lebanese President General Joseph Aoun in the afternoon",
+      "content": "Related to Musk wanting to visit Lebanon, and wanting to establish a connection between his companies and Lebanon, aiming to provide Lebanon with good internet access via Starlink",
+      "image": "https://tse4.mm.bing.net/th?id=OIF.OvnJcm%2f33W8TsxiT7Gj0%2bw&pid=Api&P=0&h=220",
+      "video": "https://example.com/video38.mp4",
+      "category": "news",
+      "date": "2024-01-03"
+    },
+    {
+      "id": 37,
+      "title": "Lebanese Israely relation",
+      "summary": "is there is a relation between Lebanon and Israel ?",
+      "content": "we will know that in let's talk at 7:00PM GMT at Batroun Times social media pages",
+      "image": "https://media.istockphoto.com/id/1365587826/photo/state-flags-of-israel-and-lebanon-on-a-light-background-state-flags.jpg?s=612x612&w=0&k=20&c=xztNT9fetbTIpm9-pKclMTvHUbHBFb44tW_p5CNviws=",
+      "video": "https://example.com/video37.mp4",
+      "category": "variety news",
+      "date": "2024-01-04"
+    },
+    {
+      "id": 36,
+      "title": "Last game between Sagesse vs Beirut",
+      "summary": "the last game between sagesse and beirut today at 10:00pm in beirut stadium, and on MTV Lebanon, also in all the restaurant in Batroun",
+      "content": "Be Many ... !",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9SIhIwS6OVHrGIRa_G_G_kMIg3xktu0I4WQ&s",
+      "video": "https://example.com/video36.mp4",
+      "category": "sport",
+      "date": "2024-01-05"
+    },
+    {
+      "id": 35,
+      "title": "Is it possible to say Starlink Lebanon ?",
+      "summary": "Musk Starting his work to open a new branch for his company in Lebanon",
+      "content": "Lebanon is one of the places that Musk want to open a internet cells in it from long time, and this is the time to do it, that is what is sad from Mr Musk to Lebanese President Aoun",
+      "image": "https://m.economictimes.com/thumb/height-450,width-600,imgsize-76030,msid-119496146/elon-musk-starlink.jpg",
+      "video": "https://example.com/video35.mp4",
+      "category": "news",
+      "date": "2024-01-06"
+    },
+    {
+      "id": 34,
+      "title": "Political Developments",
+      "summary": "Who is Lebanon!",
+      "content": "After a prolonged political deadlock, Lebanon achieved a significant milestone in January 2025 with the election of Joseph Aoun, the commander of the Lebanese Armed Forces, as president. Subsequently, Nawaf Salam, former judge at the International Court of Justice, was appointed Prime Minister. Their leadership is perceived as a move towards reducing Hezbollah's influence in Lebanese politics, especially following the group's setbacks in recent conflicts and regional shifts, such as the fall of the Assad regime in Syria.",
+      "image": "https://statemag.state.gov/wp-content/uploads/2019/07/POM-Beirut-10.jpg",
+      "video": "https://example.com/video34.mp4",
+      "category": "articles",
+      "date": "2024-01-07"
+    },
+    {
+      "id": 33,
+      "title": "Article 33",
+      "summary": "Summary for article 33.",
+      "content": "Content for article 33.",
+      "image": "https://example.com/image33.jpg",
+      "video": "https://example.com/video33.mp4",
+      "category": "category33",
+      "date": "2024-01-08"
+    },
+    {
+      "id": 32,
+      "title": "Article 32",
+      "summary": "Summary for article 32.",
+      "content": "Content for article 32.",
+      "image": "https://example.com/image32.jpg",
+      "video": "https://example.com/video32.mp4",
+      "category": "category32",
+      "date": "2024-01-09"
+    },
+    {
+      "id": 31,
+      "title": "Article 31",
+      "summary": "Summary for article 31.",
+      "content": "Content for article 31.",
+      "image": "https://example.com/image31.jpg",
+      "video": "https://example.com/video31.mp4",
+      "category": "category31",
+      "date": "2024-01-10"
+    },
+    {
+      "id": 30,
+      "title": "Political Developments",
+      "summary": "Who is Lebanon!",
+      "content": "After a prolonged political deadlock, Lebanon achieved a significant milestone in January 2025 with the election of Joseph Aoun, the commander of the Lebanese Armed Forces, as president. Subsequently, Nawaf Salam, former judge at the International Court of Justice, was appointed Prime Minister. Their leadership is perceived as a move towards reducing Hezbollah's influence in Lebanese politics, especially following the group's setbacks in recent conflicts and regional shifts, such as the fall of the Assad regime in Syria.",
+      "image": "https://statemag.state.gov/wp-content/uploads/2019/07/POM-Beirut-10.jpg",
+      "video": "https://example.com/video34.mp4",
+      "category": "articles",
+      "date": "2024-01-07"
+    },
+    {
+      "id": 29,
+      "title": "Political Developments",
+      "summary": "Who is Lebanon!",
+      "content": "After a prolonged political deadlock, Lebanon achieved a significant milestone in January 2025 with the election of Joseph Aoun, the commander of the Lebanese Armed Forces, as president. Subsequently, Nawaf Salam, former judge at the International Court of Justice, was appointed Prime Minister. Their leadership is perceived as a move towards reducing Hezbollah's influence in Lebanese politics, especially following the group's setbacks in recent conflicts and regional shifts, such as the fall of the Assad regime in Syria.",
+      "image": "https://statemag.state.gov/wp-content/uploads/2019/07/POM-Beirut-10.jpg",
+      "video": "https://example.com/video34.mp4",
+      "category": "articles",
+      "date": "2024-01-07"
+    },
+    {
+      "id": 28,
+      "title": "Article 28",
+      "summary": "Summary for article 28.",
+      "content": "Content for article 28.",
+      "image": "https://example.com/image28.jpg",
+      "video": "https://example.com/video28.mp4",
+      "category": "category28",
+      "date": "2024-01-13"
+    },
+    {
+      "id": 27,
+      "title": "Article 27",
+      "summary": "Summary for article 27.",
+      "content": "Content for article 27.",
+      "image": "https://example.com/image27.jpg",
+      "video": "https://example.com/video27.mp4",
+      "category": "category27",
+      "date": "2024-01-14"
+    },
+    {
+      "id": 26,
+      "title": "Article 26",
+      "summary": "Summary for article 26.",
+      "content": "Content for article 26.",
+      "image": "https://example.com/image26.jpg",
+      "video": "https://example.com/video26.mp4",
+      "category": "category26",
+      "date": "2024-01-15"
+    },
+    {
+      "id": 25,
+      "title": "Article 25",
+      "summary": "Summary for article 25.",
+      "content": "Content for article 25.",
+      "image": "https://example.com/image25.jpg",
+      "video": "https://example.com/video25.mp4",
+      "category": "category25",
+      "date": "2024-01-16"
+    },
+    {
+      "id": 24,
+      "title": "Article 24",
+      "summary": "Summary for article 24.",
+      "content": "Content for article 24.",
+      "image": "https://example.com/image24.jpg",
+      "video": "https://example.com/video24.mp4",
+      "category": "category24",
+      "date": "2024-01-17"
+    },
+    {
+      "id": 23,
+      "title": "Article 23",
+      "summary": "Summary for article 23.",
+      "content": "Content for article 23.",
+      "image": "https://example.com/image23.jpg",
+      "video": "https://example.com/video23.mp4",
+      "category": "category23",
+      "date": "2024-01-18"
+    },
+    {
+      "id": 22,
+      "title": "Article 22",
+      "summary": "Summary for article 22.",
+      "content": "Content for article 22.",
+      "image": "https://example.com/image22.jpg",
+      "video": "https://example.com/video22.mp4",
+      "category": "category22",
+      "date": "2024-01-19"
+    },
+    {
+      "id": 21,
+      "title": "Article 21",
+      "summary": "Summary for article 21.",
+      "content": "Content for article 21.",
+      "image": "https://example.com/image21.jpg",
+      "video": "https://example.com/video21.mp4",
+      "category": "category21",
+      "date": "2024-01-20"
+    },
+    {
+      "id": 20,
+      "title": "Article 20",
+      "summary": "Summary for article 20.",
+      "content": "Content for article 20.",
+      "image": "https://example.com/image20.jpg",
+      "video": "https://example.com/video20.mp4",
+      "category": "category20",
+      "date": "2024-01-21"
+    },
+    {
+      "id": 19,
+      "title": "Article 19",
+      "summary": "Summary for article 19.",
+      "content": "Content for article 19.",
+      "image": "https://example.com/image19.jpg",
+      "video": "https://example.com/video19.mp4",
+      "category": "category19",
+      "date": "2024-01-22"
+    },
+    {
+      "id": 18,
+      "title": "Article 18",
+      "summary": "Summary for article 18.",
+      "content": "Content for article 18.",
+      "image": "https://example.com/image18.jpg",
+      "video": "https://example.com/video18.mp4",
+      "category": "category18",
+      "date": "2024-01-23"
+    },
+    {
+      "id": 17,
+      "title": "Article 17",
+      "summary": "Summary for article 17.",
+      "content": "Content for article 17.",
+      "image": "https://example.com/image17.jpg",
+      "video": "https://example.com/video17.mp4",
+      "category": "category17",
+      "date": "2024-01-24"
+    },
+    {
+      "id": 16,
+      "title": "Article 16",
+      "summary": "Summary for article 16.",
+      "content": "Content for article 16.",
+      "image": "https://example.com/image16.jpg",
+      "video": "https://example.com/video16.mp4",
+      "category": "category16",
+      "date": "2024-01-25"
+    },
+    {
+      "id": 15,
+      "title": "Article 15",
+      "summary": "Summary for article 15.",
+      "content": "Content for article 15.",
+      "image": "https://example.com/image15.jpg",
+      "video": "https://example.com/video15.mp4",
+      "category": "category15",
+      "date": "2024-01-26"
+    },
+    {
+      "id": 14,
+      "title": "Article 14",
+      "summary": "Summary for article 14.",
+      "content": "Content for article 14.",
+      "image": "https://example.com/image14.jpg",
+      "video": "https://example.com/video14.mp4",
+      "category": "category14",
+      "date": "2024-01-27"
+    },
+    {
+      "id": 13,
+      "title": "Article 13",
+      "summary": "Summary for article 13.",
+      "content": "Content for article 13.",
+      "image": "https://example.com/image13.jpg",
+      "video": "https://example.com/video13.mp4",
+      "category": "category13",
+      "date": "2024-01-28"
+    },
+    {
+      "id": 12,
+      "title": "Article 12",
+      "summary": "Summary for article 12.",
+      "content": "Content for article 12.",
+      "image": "https://example.com/image12.jpg",
+      "video": "https://example.com/video12.mp4",
+      "category": "category12",
+      "date": "2024-01-29"
+    },
     {
       "id": 11,
-      "title": "Elon Musk Call Lebanese President Aoun!",
-      "summary": "Latest updates on the country's financial reforms and international support...",
-      "content": "Lebanon's government has announced a comprehensive economic recovery plan aimed at stabilizing the country's financial sector. The plan includes significant reforms to the banking system, restructuring of public debt, and implementation of new fiscal policies. International partners, including the World Bank and IMF, have expressed cautious optimism about the proposed measures. The recovery plan focuses on three main pillars: financial sector reform, fiscal consolidation, and structural reforms to improve governance and transparency. Key measures include bank recapitalization, deposit protection for small savers, and the establishment of a new financial regulatory framework. The government expects these reforms to restore confidence in the Lebanese pound and attract foreign investment.",
-      "image": "https://tse4.mm.bing.net/th?id=OIF.OvnJcm%2f33W8TsxiT7Gj0%2bw&pid=Api&P=0&h=220",
-      "category": "news",
-      "date": "7-1-2025"
-        },
+      "title": "Article 11",
+      "summary": "Summary for article 11.",
+      "content": "Content for article 11.",
+      "image": "https://example.com/image11.jpg",
+      "video": "https://example.com/video11.mp4",
+      "category": "category11",
+      "date": "2024-01-30"
+    },
+    {
+      "id": 10,
+      "title": "Article 10",
+      "summary": "Summary for article 10.",
+      "content": "Content for article 10.",
+      "image": "https://example.com/image10.jpg",
+      "video": "https://example.com/video10.mp4",
+      "category": "category10",
+      "date": "2024-01-31"
+    },
+    {
+      "id": 9,
+      "title": "Article 9",
+      "summary": "Summary for article 9.",
+      "content": "Content for article 9.",
+      "image": "https://example.com/image9.jpg",
+      "video": "https://example.com/video9.mp4",
+      "category": "category9",
+      "date": "2024-02-01"
+    },
+    {
+      "id": 8,
+      "title": "Article 8",
+      "summary": "Summary for article 8.",
+      "content": "Content for article 8.",
+      "image": "https://example.com/image8.jpg",
+      "video": "https://example.com/video8.mp4",
+      "category": "category8",
+      "date": "2024-02-02"
+    },
+    {
+      "id": 7,
+      "title": "Article 7",
+      "summary": "Summary for article 7.",
+      "content": "Content for article 7.",
+      "image": "https://example.com/image7.jpg",
+      "video": "https://example.com/video7.mp4",
+      "category": "category7",
+      "date": "2024-02-03"
+    },
+    {
+      "id": 6,
+      "title": "Article 6",
+      "summary": "Summary for article 6.",
+      "content": "Content for article 6.",
+      "image": "https://example.com/image6.jpg",
+      "video": "https://example.com/video6.mp4",
+      "category": "category6",
+      "date": "2024-02-04"
+    },
+    {
+      "id": 5,
+      "title": "Article 5",
+      "summary": "Summary for article 5.",
+      "content": "Content for article 5.",
+      "image": "https://example.com/image5.jpg",
+      "video": "https://example.com/video5.mp4",
+      "category": "category5",
+      "date": "2024-02-05"
+    },
+    {
+      "id": 4,
+      "title": "Article 4",
+      "summary": "Summary for article 4.",
+      "content": "Content for article 4.",
+      "image": "https://example.com/image4.jpg",
+      "video": "https://example.com/video4.mp4",
+      "category": "category4",
+      "date": "2024-02-06"
+    },
+    {
+      "id": 3,
+      "title": "Article 3",
+      "summary": "Summary for article 3.",
+      "content": "Content for article 3.",
+      "image": "https://example.com/image3.jpg",
+      "video": "https://example.com/video3.mp4",
+      "category": "category3",
+      "date": "2024-02-07"
+    },
+    {
+      "id": 2,
+      "title": "Article 2",
+      "summary": "Summary for article 2.",
+      "content": "Content for article 2.",
+      "image": "https://example.com/image2.jpg",
+      "video": "https://example.com/video2.mp4",
+      "category": "category2",
+      "date": "2024-02-08"
+    },
     {
       "id": 1,
-      "title": "Lebanon's Economic Recovery Plan",
-      "summary": "Latest updates on the country's financial reforms and international support...",
-      "content": "Lebanon's government has announced a comprehensive economic recovery plan aimed at stabilizing the country's financial sector. The plan includes significant reforms to the banking system, restructuring of public debt, and implementation of new fiscal policies. International partners, including the World Bank and IMF, have expressed cautious optimism about the proposed measures. The recovery plan focuses on three main pillars: financial sector reform, fiscal consolidation, and structural reforms to improve governance and transparency. Key measures include bank recapitalization, deposit protection for small savers, and the establishment of a new financial regulatory framework. The government expects these reforms to restore confidence in the Lebanese pound and attract foreign investment.",
-      "image": "https://tse3.mm.bing.net/th/id/OIP.swQUP5C17yWCldC4U20OYAHaFS?pid=Api&P=0&h=220",
-      "category": "economics",
-      "date": "2024-01-15"
-        },
-        {
-      "id": 2,
-      "title": "Tech Innovations in 2024",
-      "summary": "A look at the most promising technology trends shaping the year...",
-      "content": "The technology sector is witnessing rapid advancements in artificial intelligence, quantum computing, and green energy solutions. Major companies are investing in research and development to stay ahead in the competitive market. Experts predict that AI-driven automation and sustainable tech will dominate the industry landscape in 2024.",
-      "image": "https://www.google.com/search?tbm=isch&q=Tech+Innovations+2024",
-      "category": "technology",
-      "date": "2024-02-10"
-        },
-        {
-      "id": 3,
-      "title": "Global Climate Change Conference",
-      "summary": "World leaders gather to discuss urgent climate action...",
-      "content": "The annual Global Climate Change Conference brought together leaders from over 100 countries to address the escalating climate crisis. Key topics included carbon emissions reduction, renewable energy adoption, and international cooperation. The conference concluded with a renewed commitment to the Paris Agreement.",
-      "image": "https://www.google.com/search?tbm=isch&q=Global+Climate+Change+Conference",
-      "category": "environment",
-      "date": "2024-03-05"
-        },
-        {
-      "id": 4,
-      "title": "Breakthrough in Cancer Research",
-      "summary": "Scientists announce a major breakthrough in cancer treatment...",
-      "content": "A team of international researchers has developed a new therapy that significantly improves survival rates for certain types of cancer. The treatment, which targets cancer cells at the molecular level, has shown promising results in clinical trials and is expected to be available to patients soon.",
-      "image": "https://www.google.com/search?tbm=isch&q=Breakthrough+in+Cancer+Research",
-      "category": "health",
-      "date": "2024-04-12"
-        },
-        {
-      "id": 5,
-      "title": "Global Markets Rally",
-      "summary": "Stock markets around the world see significant gains...",
-      "content": "Global stock markets rallied this week as investors responded positively to strong corporate earnings and easing inflation concerns. Analysts believe that the upward trend may continue if economic indicators remain favorable.",
-      "image": "https://www.google.com/search?tbm=isch&q=Global+Markets+Rally",
-      "category": "business",
-      "date": "2024-05-20"
-        },
-        {
-      "id": 6,
-      "title": "Historic Peace Agreement Signed",
-      "summary": "Two nations sign a historic peace agreement after decades of conflict...",
-      "content": "In a landmark event, leaders from two neighboring countries signed a peace agreement, ending years of hostilities. The agreement includes provisions for border security, economic cooperation, and cultural exchange programs.",
-      "image": "https://www.google.com/search?tbm=isch&q=Historic+Peace+Agreement+Signed",
-      "category": "world",
-      "date": "2024-06-01"
-        },
-        {
-      "id": 7,
-      "title": "Advances in Renewable Energy",
-      "summary": "New technologies are making renewable energy more accessible...",
-      "content": "Innovations in solar and wind power are driving down costs and increasing efficiency. Governments and private companies are investing heavily in renewable infrastructure to meet climate goals and reduce reliance on fossil fuels.",
-      "image": "https://www.google.com/search?tbm=isch&q=Advances+in+Renewable+Energy",
-      "category": "science",
-      "date": "2024-06-15"
-        },
-        {
-      "id": 8,
-      "title": "Major Sports Event Highlights",
-      "summary": "A recap of the most exciting moments from this year's major sports events...",
-      "content": "Fans around the world enjoyed thrilling matches and record-breaking performances at this year's major sports events. Highlights include unexpected upsets, new champions, and memorable moments that will go down in history.",
-      "image": "https://www.google.com/search?tbm=isch&q=Major+Sports+Event+Highlights",
-      "category": "sports",
-      "date": "2024-07-10"
-        },
-        {
-      "id": 9,
-      "title": "Breakthroughs in Space Exploration",
-      "summary": "New missions and discoveries expand our understanding of the universe...",
-      "content": "Space agencies have launched several new missions to explore distant planets and moons. Recent discoveries include evidence of water on Mars and new insights into the formation of galaxies.",
-      "image": "https://www.google.com/search?tbm=isch&q=Breakthroughs+in+Space+Exploration",
-      "category": "space",
-      "date": "2024-08-05"
-        },
-        {
-      "id": 10,
-      "title": "Education Reform Initiatives",
-      "summary": "Governments introduce new policies to improve education systems...",
-      "content": "Several countries have announced major education reform initiatives aimed at improving access, quality, and equity in education. The reforms focus on teacher training, curriculum updates, and increased funding for schools.",
-      "image": "https://www.google.com/search?tbm=isch&q=Education+Reform+Initiatives",
-      "category": "education",
-      "date": "2024-09-01"
-        }
+      "title": "Article 1",
+      "summary": "Summary for article 1.",
+      "content": "Content for article 1.",
+      "image": "https://example.com/image1.jpg",
+      "video": "https://example.com/video1.mp4",
+      "category": "category1",
+      "date": "2024-02-09"
+    }
   ]
 }

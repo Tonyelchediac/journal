@@ -290,7 +290,6 @@ nav ul li a.active {
   overflow-y: auto;
   max-height: 70vh;
   scrollbar-width: thin;
-  scrollbar-color: var(--scroll-color) var(--first-background-color);
 }
 
 .home-right-side .breaking-news a {
@@ -315,6 +314,7 @@ nav ul li a.active {
   padding: 10px;
   border-radius: 10px;
   color: var(--color-primary);
+  width: 100%;
 }
 
 .samll-articles {
@@ -328,7 +328,6 @@ nav ul li a.active {
   overflow-x: auto;
   padding-bottom: 10px;
   scrollbar-width: thin;
-  scrollbar-color: var(--scroll-color) var(--first-background-color);
 }
 
 .small-article-content {
@@ -346,17 +345,17 @@ nav ul li a.active {
 
 .news-list {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 24px;
-  overflow-x: auto;
   padding-bottom: 10px;
-  scrollbar-width: thin;
-  scrollbar-color: var(--scroll-color) var(--first-background-color);
 }
 
 .news-item {
   border-radius: 10px;
   min-width: 300px;
-  max-width: 340px;
+  max-width: 350px;
   flex: 0 0 auto;
   display: flex;
   flex-direction: column;
@@ -503,6 +502,7 @@ nav ul li a.active {
   .articles-content {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
   }
 }
 
@@ -552,6 +552,9 @@ nav ul li a.active {
 #article-content img {
   display: block;
   max-width: 100%;
+  min-height: 250px;
+  max-height: 300px;
+  object-fit: cover;
   margin: 24px auto;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
@@ -625,6 +628,13 @@ nav ul li a.active {
   font-size: 1rem;
   font-weight: 500;
   min-width: 180px;
+}
+
+.related-articles-list a img{
+  max-width: 100%;
+  min-height: 250px;
+  max-height: 300px;
+  object-fit: cover;
 }
 
 @media (max-width: 900px) {
