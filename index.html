@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!-- title -->
     <title>The Batroun Times</title>
     <!-- js -->
     <script src="js/script.js" defer></script>
+    <script src="js/article.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
 </head>
@@ -18,7 +20,21 @@
 
   <header>
     <div class="header-container">
-        <h1 class="header-title">The Batroun Times</h1>
+        <!-- Hidden icon for small screens -->
+        <div class="info-icon">
+          <i class="fas fa-info-circle"></i>
+          <div class="hover-info">
+            <p>VOL. CL</p>
+            <p>No. 2</p>
+          </div>
+        </div>
+        <div class="header-top-content">
+  <p class="vol">VOL. CL</p>
+  <h1 class="header-title">The Batroun Times</h1>
+  <p class="no">No. 2</p>
+
+</div>
+
         <nav>
         <ul id="nav-list">
             <li><a href="#all" class="active">News</a></li>
@@ -55,9 +71,10 @@
             <div class="home-left-side">
                 <img src="https://i.pinimg.com/originals/f0/36/49/f036494e62292ab79d51b413849e5c2a.jpg" alt="Lebanese presidentail palace">
                 <article class="image-article">
-                    <h2>The White House: Symbol of American Leadership</h2>
-                    <p>The White House is the official residence and workplace of the President of the United States. Located at 1600 Pennsylvania Avenue NW in Washington, D.C., it has served as the home of every U.S. president since John Adams in 1800. Designed by Irish-born architect James Hoban, the White House was built between 1792 and 1800 and has undergone several renovations and expansions over the centuries.</p>
+                    <h2 class="headline-h2">The White House: Symbol of American Leadership</h2>
+                    <p class="content-p">The White House is the official residence and workplace of the President of the United States. Located at 1600 Pennsylvania Avenue NW in Washington, D.C., it has served as the home of every U.S. president since John Adams in 1800. Designed by Irish-born architect James Hoban, the White House was built between 1792 and 1800 and has undergone several renovations and expansions over the centuries. <br> The White House is the official residence and workplace of the President of the United States. Located at 1600 Pennsylvania Avenue NW in Washington, D.C., it has served as the home of every U.S. president since John Adams in 1800. Designed by Irish-born architect James Hoban, the White House was built between 1792 and 1800 and has undergone several renovations and expansions over the centuries.</p>
                 </article>
+                <a href="#" class="read-more">Read more</a>
             </div>
 
             <div class="home-right-side">
@@ -68,47 +85,8 @@
                 </div>
 
                 <div class="breaking-news">
-                    <div class="new">
-                        <h2>Lebanon Launches New Tech Hub in Beirut</h2>
-                        <p class="date"><i class="fas fa-calendar"></i> April 2, 2024</p>
-                    </div>
-                    <div class="new">
-                        <h2>Parliament Approves Economic Reform Bill</h2>
-                        <p class="date"><i class="fas fa-calendar"></i> April 1, 2024</p>
-                    </div>
-                    <div class="new">
-                        <h2>Major Storm Causes Power Outages Nationwide</h2>
-                        <p class="date"><i class="fas fa-calendar"></i> March 30, 2024</p>
-                    </div>
-                    <div class="new">
-                        <h2>Lebanese Football Team Wins Regional Cup</h2>
-                        <p class="date"><i class="fas fa-calendar"></i> March 28, 2024</p>
-                    </div>
-                    <div class="new">
-                        <h2>International Investors Eye Lebanese Startups</h2>
-                        <p class="date"><i class="fas fa-calendar"></i> March 27, 2024</p>
-                    </div>
-                    <div class="new">
-                        <h2>Government Announces New Education Initiative</h2>
-                        <p class="date"><i class="fas fa-calendar"></i> March 25, 2024</p>
-                    </div>
-                    <div class="new">
-                        <h2>Beirut Hosts Global Business Conference</h2>
-                        <p class="date"><i class="fas fa-calendar"></i> March 23, 2024</p>
-                    </div>
-                    <div class="new">
-                        <h2>New Metro Line Opens in Tripoli</h2>
-                        <p class="date"><i class="fas fa-calendar"></i> March 20, 2024</p>
-                    </div>
-                    <div class="new">
-                        <h2>Lebanon Expands Renewable Energy Projects</h2>
-                        <p class="date"><i class="fas fa-calendar"></i> March 18, 2024</p>
-                    </div>
-                    <div class="new">
-                        <h2>Tourism Sector Sees Record Growth</h2>
-                        <p class="date"><i class="fas fa-calendar"></i> March 15, 2024</p>
-                    </div>
-
+                    <!-- Content will be loaded dynamically from JSON -->
+                    <div class="loading">Loading breaking news...</div>
                 </div>
 
             </div>
@@ -123,16 +101,16 @@
             <h2 class="title">Articles</h2>
 
             <div class="articles-content">
-                <article class="news-article-content">
-                    <h2>Lebanon's Economic Challenges: A Path Forward</h2>
+                <a href="" class="news-article-content">
+                    <h2 class="headline-h2">Lebanon's Economic Challenges: A Path Forward</h2>
                     <p class="date"><i class="fas fa-calendar"></i> April 3, 2024</p>
-                    <p>Lebanon is facing significant economic challenges, including high unemployment rates, inflation, and a depreciating currency. The government is working on reforms to stabilize the economy and attract foreign investment. Key sectors such as tourism and technology are seen as potential growth areas.</p>
-                </article>
-                <article class="news-article-content">
-                    <h2>Lebanon Strengthens Ties with European Union</h2>
-                    <p class="date"><i class="fas fa-calendar"></i> April 4, 2024</p>
-                    <p>Lebanon has signed a new cooperation agreement with the European Union aimed at boosting trade, supporting infrastructure projects, and enhancing educational exchanges. Officials say the partnership will help drive economic recovery and foster innovation across key sectors.</p>
-                </article>
+                    <p class="content-p">Lebanon is facing significant economic challenges, including high unemployment rates, inflation, and a depreciating currency. The government is working on reforms to stabilize the economy and attract foreign investment. Key sectors such as tourism and technology are seen as potential growth areas.</p>
+                </a>
+                <a href="" class="news-article-content">
+                    <h2 class="headline-h2">Lebanon's Economic Challenges: A Path Forward</h2>
+                    <p class="date"><i class="fas fa-calendar"></i> April 3, 2024</p>
+                    <p class="content-p">Lebanon is facing significant economic challenges, including high unemployment rates, inflation, and a depreciating currency. The government is working on reforms to stabilize the economy and attract foreign investment. Key sectors such as tourism and technology are seen as potential growth areas.</p>
+                </a>
             </div>
         </div>
 
@@ -140,46 +118,55 @@
             <div class="small-articles-content">
 
                 <article class="small-article-content">
-                    <h2>Lebanon's Economic Challenges: A Path Forward</h2>
+                    <h2 class="headline-h2">Lebanon's Economic Challenges: A Path Forward</h2>
                     <p class="date"><i class="fas fa-calendar"></i> April 3, 2024</p>
-                    <p>Lebanon is facing significant economic challenges, including high unemployment rates, inflation, and a depreciating currency. The government is working on reforms to stabilize the economy and attract foreign investment. Key sectors such as tourism and technology are seen as potential growth areas.</p>
+                    <p class="content-p">Lebanon is facing significant economic challenges, including high unemployment rates, inflation, and a depreciating currency. The government is working on reforms to stabilize the economy and attract foreign investment. Key sectors such as tourism and technology are seen as potential growth areas.</p>
                 </article>
                 <article class="small-article-content">
-                    <h2>Lebanon's Economic Challenges: A Path Forward</h2>
+                    <h2 class="headline-h2">Lebanon's Economic Challenges: A Path Forward</h2>
                     <p class="date"><i class="fas fa-calendar"></i> April 3, 2024</p>
-                    <p>Lebanon is facing significant economic challenges, including high unemployment rates, inflation, and a depreciating currency. The government is working on reforms to stabilize the economy and attract foreign investment. Key sectors such as tourism and technology are seen as potential growth areas.</p>
+                    <p class="content-p">Lebanon is facing significant economic challenges, including high unemployment rates, inflation, and a depreciating currency. The government is working on reforms to stabilize the economy and attract foreign investment. Key sectors such as tourism and technology are seen as potential growth areas.</p>
                 </article>
                 <article class="small-article-content">
-                    <h2>Lebanon's Economic Challenges: A Path Forward</h2>
+                    <h2 class="headline-h2">Lebanon's Economic Challenges: A Path Forward</h2>
                     <p class="date"><i class="fas fa-calendar"></i> April 3, 2024</p>
-                    <p>Lebanon is facing significant economic challenges, including high unemployment rates, inflation, and a depreciating currency. The government is working on reforms to stabilize the economy and attract foreign investment. Key sectors such as tourism and technology are seen as potential growth areas.</p>
+                    <p class="content-p">Lebanon is facing significant economic challenges, including high unemployment rates, inflation, and a depreciating currency. The government is working on reforms to stabilize the economy and attract foreign investment. Key sectors such as tourism and technology are seen as potential growth areas.</p>
                 </article>
                 <article class="small-article-content">
-                    <h2>Lebanon's Economic Challenges: A Path Forward</h2>
+                    <h2 class="headline-h2">Lebanon's Economic Challenges: A Path Forward</h2>
                     <p class="date"><i class="fas fa-calendar"></i> April 3, 2024</p>
-                    <p>Lebanon is facing significant economic challenges, including high unemployment rates, inflation, and a depreciating currency. The government is working on reforms to stabilize the economy and attract foreign investment. Key sectors such as tourism and technology are seen as potential growth areas.</p>
+                    <p class="content-p">Lebanon is facing significant economic challenges, including high unemployment rates, inflation, and a depreciating currency. The government is working on reforms to stabilize the economy and attract foreign investment. Key sectors such as tourism and technology are seen as potential growth areas.</p>
                 </article>
                 <article class="small-article-content">
-                    <h2>Lebanon's Economic Challenges: A Path Forward</h2>
+                    <h2 class="headline-h2">Lebanon's Economic Challenges: A Path Forward</h2>
                     <p class="date"><i class="fas fa-calendar"></i> April 3, 2024</p>
-                    <p>Lebanon is facing significant economic challenges, including high unemployment rates, inflation, and a depreciating currency. The government is working on reforms to stabilize the economy and attract foreign investment. Key sectors such as tourism and technology are seen as potential growth areas.</p>
+                    <p class="content-p">Lebanon is facing significant economic challenges, including high unemployment rates, inflation, and a depreciating currency. The government is working on reforms to stabilize the economy and attract foreign investment. Key sectors such as tourism and technology are seen as potential growth areas.</p>
                 </article>
                 <article class="small-article-content">
-                    <h2>Lebanon's Economic Challenges: A Path Forward</h2>
+                    <h2 class="headline-h2">Lebanon's Economic Challenges: A Path Forward</h2>
                     <p class="date"><i class="fas fa-calendar"></i> April 3, 2024</p>
-                    <p>Lebanon is facing significant economic challenges, including high unemployment rates, inflation, and a depreciating currency. The government is working on reforms to stabilize the economy and attract foreign investment. Key sectors such as tourism and technology are seen as potential growth areas.</p>
+                    <p class="content-p">Lebanon is facing significant economic challenges, including high unemployment rates, inflation, and a depreciating currency. The government is working on reforms to stabilize the economy and attract foreign investment. Key sectors such as tourism and technology are seen as potential growth areas.</p>
                 </article>
                 <article class="small-article-content">
-                    <h2>Lebanon's Economic Challenges: A Path Forward</h2>
+                    <h2 class="headline-h2">Lebanon's Economic Challenges: A Path Forward</h2>
                     <p class="date"><i class="fas fa-calendar"></i> April 3, 2024</p>
-                    <p>Lebanon is facing significant economic challenges, including high unemployment rates, inflation, and a depreciating currency. The government is working on reforms to stabilize the economy and attract foreign investment. Key sectors such as tourism and technology are seen as potential growth areas.</p>
+                    <p class="content-p">Lebanon is facing significant economic challenges, including high unemployment rates, inflation, and a depreciating currency. The government is working on reforms to stabilize the economy and attract foreign investment. Key sectors such as tourism and technology are seen as potential growth areas.</p>
                 </article>
                 <article class="small-article-content">
-                    <h2>Lebanon's Economic Challenges: A Path Forward</h2>
+                    <h2 class="headline-h2">Lebanon's Economic Challenges: A Path Forward</h2>
                     <p class="date"><i class="fas fa-calendar"></i> April 3, 2024</p>
-                    <p>Lebanon is facing significant economic challenges, including high unemployment rates, inflation, and a depreciating currency. The government is working on reforms to stabilize the economy and attract foreign investment. Key sectors such as tourism and technology are seen as potential growth areas.</p>
+                    <p class="content-p">Lebanon is facing significant economic challenges, including high unemployment rates, inflation, and a depreciating currency. The government is working on reforms to stabilize the economy and attract foreign investment. Key sectors such as tourism and technology are seen as potential growth areas.</p>
                 </article>
-
+                <article class="small-article-content">
+                    <h2 class="headline-h2">Lebanon's Economic Challenges: A Path Forward</h2>
+                    <p class="date"><i class="fas fa-calendar"></i> April 3, 2024</p>
+                    <p class="content-p">Lebanon is facing significant economic challenges, including high unemployment rates, inflation, and a depreciating currency. The government is working on reforms to stabilize the economy and attract foreign investment. Key sectors such as tourism and technology are seen as potential growth areas.</p>
+                </article>
+                <article class="small-article-content">
+                    <h2 class="headline-h2">Lebanon's Economic Challenges: A Path Forward</h2>
+                    <p class="date"><i class="fas fa-calendar"></i> April 3, 2024</p>
+                    <p class="content-p">Lebanon is facing significant economic challenges, including high unemployment rates, inflation, and a depreciating currency. The government is working on reforms to stabilize the economy and attract foreign investment. Key sectors such as tourism and technology are seen as potential growth areas.</p>
+                </article>
             </div>
         </div>
 
@@ -192,83 +179,91 @@
                 <article class="news-item">
                     <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Tech Hub in Beirut">
                     <div class="news-content">
-                        <h3>Lebanon Launches New Tech Hub in Beirut</h3>
-                        <p class="news-excerpt">A new technology hub has opened in Beirut, aiming to foster innovation and support local startups in Lebanon's growing tech sector.</p>
+                        <h2 class="headline-h2">Lebanon Launches New Tech Hub in Beirut</h2>
+                        <p class="content-p">A new technology hub has opened in Beirut, aiming to foster innovation and support local startups in Lebanon's growing tech sector.</p>
                         <a href="#" class="read-more">Read more</a>
                     </div>
                 </article>
                 <article class="news-item">
-                    <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Economic Reform Bill">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Tech Hub in Beirut">
                     <div class="news-content">
-                        <h3>Parliament Approves Economic Reform Bill</h3>
-                        <p class="news-excerpt">Lebanon's parliament has passed a sweeping economic reform bill designed to stabilize the economy and attract foreign investment.</p>
+                        <h2 class="headline-h2">Lebanon Launches New Tech Hub in Beirut</h2>
+                        <p class="content-p">A new technology hub has opened in Beirut, aiming to foster innovation and support local startups in Lebanon's growing tech sector.</p>
                         <a href="#" class="read-more">Read more</a>
                     </div>
                 </article>
                 <article class="news-item">
-                    <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=400&q=80" alt="Power Outages">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Tech Hub in Beirut">
                     <div class="news-content">
-                        <h3>Major Storm Causes Power Outages Nationwide</h3>
-                        <p class="news-excerpt">A severe storm swept across Lebanon, causing widespread power outages and disrupting daily life in several regions.</p>
+                        <h2 class="headline-h2">Lebanon Launches New Tech Hub in Beirut</h2>
+                        <p class="content-p">A new technology hub has opened in Beirut, aiming to foster innovation and support local startups in Lebanon's growing tech sector.</p>
                         <a href="#" class="read-more">Read more</a>
                     </div>
                 </article>
                 <article class="news-item">
-                    <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Football Team">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Tech Hub in Beirut">
                     <div class="news-content">
-                        <h3>Lebanese Football Team Wins Regional Cup</h3>
-                        <p class="news-excerpt">Lebanon's national football team celebrated a historic victory, winning the regional championship after a thrilling final match.</p>
+                        <h2 class="headline-h2">Lebanon Launches New Tech Hub in Beirut</h2>
+                        <p class="content-p">A new technology hub has opened in Beirut, aiming to foster innovation and support local startups in Lebanon's growing tech sector.</p>
                         <a href="#" class="read-more">Read more</a>
                     </div>
                 </article>
                 <article class="news-item">
-                    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Investors">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Tech Hub in Beirut">
                     <div class="news-content">
-                        <h3>International Investors Eye Lebanese Startups</h3>
-                        <p class="news-excerpt">A wave of international investors is showing interest in Lebanon's vibrant startup scene, bringing new opportunities for growth.</p>
+                        <h2 class="headline-h2">Lebanon Launches New Tech Hub in Beirut</h2>
+                        <p class="content-p">A new technology hub has opened in Beirut, aiming to foster innovation and support local startups in Lebanon's growing tech sector.</p>
                         <a href="#" class="read-more">Read more</a>
                     </div>
                 </article>
                 <article class="news-item">
-                    <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=400&q=80" alt="Education Initiative">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Tech Hub in Beirut">
                     <div class="news-content">
-                        <h3>Government Announces New Education Initiative</h3>
-                        <p class="news-excerpt">The Lebanese government has launched a new initiative to improve education standards and increase access to quality learning.</p>
+                        <h2 class="headline-h2">Lebanon Launches New Tech Hub in Beirut</h2>
+                        <p class="content-p">A new technology hub has opened in Beirut, aiming to foster innovation and support local startups in Lebanon's growing tech sector.</p>
                         <a href="#" class="read-more">Read more</a>
                     </div>
                 </article>
                 <article class="news-item">
-                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="Business Conference">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Tech Hub in Beirut">
                     <div class="news-content">
-                        <h3>Beirut Hosts Global Business Conference</h3>
-                        <p class="news-excerpt">Business leaders from around the world gathered in Beirut for a major conference focused on economic development and innovation.</p>
+                        <h2 class="headline-h2">Lebanon Launches New Tech Hub in Beirut</h2>
+                        <p class="content-p">A new technology hub has opened in Beirut, aiming to foster innovation and support local startups in Lebanon's growing tech sector.</p>
                         <a href="#" class="read-more">Read more</a>
                     </div>
                 </article>
                 <article class="news-item">
-                    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Metro Line">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Tech Hub in Beirut">
                     <div class="news-content">
-                        <h3>New Metro Line Opens in Tripoli</h3>
-                        <p class="news-excerpt">Tripoli celebrates the opening of a new metro line, improving transportation and connectivity in northern Lebanon.</p>
+                        <h2 class="headline-h2">Lebanon Launches New Tech Hub in Beirut</h2>
+                        <p class="content-p">A new technology hub has opened in Beirut, aiming to foster innovation and support local startups in Lebanon's growing tech sector.</p>
                         <a href="#" class="read-more">Read more</a>
                     </div>
                 </article>
                 <article class="news-item">
-                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Renewable Energy">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Tech Hub in Beirut">
                     <div class="news-content">
-                        <h3>Lebanon Expands Renewable Energy Projects</h3>
-                        <p class="news-excerpt">Lebanon is investing in renewable energy, launching new solar and wind projects to reduce reliance on fossil fuels.</p>
+                        <h2 class="headline-h2">Lebanon Launches New Tech Hub in Beirut</h2>
+                        <p class="content-p">A new technology hub has opened in Beirut, aiming to foster innovation and support local startups in Lebanon's growing tech sector.</p>
                         <a href="#" class="read-more">Read more</a>
                     </div>
                 </article>
                 <article class="news-item">
-                    <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Tourism Growth">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Tech Hub in Beirut">
                     <div class="news-content">
-                        <h3>Tourism Sector Sees Record Growth</h3>
-                        <p class="news-excerpt">Lebanon's tourism industry is booming, with record numbers of visitors enjoying the country's rich culture and scenic beauty.</p>
+                        <h2 class="headline-h2">Lebanon Launches New Tech Hub in Beirut</h2>
+                        <p class="content-p">A new technology hub has opened in Beirut, aiming to foster innovation and support local startups in Lebanon's growing tech sector.</p>
                         <a href="#" class="read-more">Read more</a>
                     </div>
-                </article></article>
+                </article>
+                <article class="news-item">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Tech Hub in Beirut">
+                    <div class="news-content">
+                        <h2 class="headline-h2">Lebanon Launches New Tech Hub in Beirut</h2>
+                        <p class="content-p">A new technology hub has opened in Beirut, aiming to foster innovation and support local startups in Lebanon's growing tech sector.</p>
+                        <a href="#" class="read-more">Read more</a>
+                    </div>
+                </article>
             </div>
         </div>
     </section>

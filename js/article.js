@@ -1,0 +1,286 @@
+// Function to load and display breaking news from Google Sheet
+async function loadNewsData() {
+    try {
+        const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR73gUvLR_1q90O5u6YmRwOLZ-m_5mojazXV0YPbreoV0_dJH3sv4vHxRcDcARi3ynzeYJ3a0UFjwTp/pubhtml?gid=0&single=true';
+
+        const response = await fetch(sheetUrl);
+        const text = await response.text();
+        const parsedData = parseSheetHtml(text);
+
+        window.articlesData = parsedData;
+
+        // Load sections
+        loadBreakingNews(parsedData);
+        loadArticlesSection(parsedData);
+        loadNewsSection(parsedData);
+    } catch (error) {
+        console.error('Error loading news data:', error);
+    }
+}
+
+// Function to parse Google Sheet HTML table into JS array of objects
+function parseSheetHtml(html) {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+    const rows = doc.querySelectorAll('table tbody tr');
+
+    const headers = [];
+    const data = [];
+
+    rows.forEach((row, index) => {
+        const cells = row.querySelectorAll('td, th');
+        if (index === 0) {
+            // Extract headers
+            cells.forEach(cell => {
+                headers.push(cell.innerText.trim());
+            });
+        } else {
+            const obj = {};
+            cells.forEach((cell, i) => {
+                const key = headers[i];
+                let value = cell.innerText.trim();
+
+                // Handle special fields
+                if (key === 'time') {
+                    const parsedDate = new Date(value);
+                    value = !isNaN(parsedDate) ? parsedDate.toISOString() : '';
+                }
+
+                obj[key] = value;
+            });
+
+            // Ensure we have an id
+            if (!obj.id || obj.id === '') {
+                obj.id = index; // fallback ID
+            }
+
+            // Default category
+            if (!obj.category || obj.category.trim() === '') {
+                obj.category = 'Uncategorized';
+            }
+
+            data.push(obj);
+        }
+    });
+
+    return data;
+}
+
+// Function to populate breaking news section
+function loadBreakingNews(articles) {
+    const breakingNewsContainer = document.querySelector('.breaking-news');
+    if (!breakingNewsContainer) return;
+    breakingNewsContainer.innerHTML = '';
+    const breakingNewsArticles = articles.slice(0, 20);
+    breakingNewsArticles.forEach(article => {
+        const newsItem = document.createElement('a');
+        newsItem.href = `article.html?id=${article.id}`;
+        newsItem.className = 'new';
+        const formattedDate = new Date(article.time).toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+        newsItem.innerHTML = `
+            <h2 class="headline-h2">${article.title}</h2>
+            <p class="date"><i class="fas fa-calendar"></i> ${formattedDate}</p>
+        `;
+        breakingNewsContainer.appendChild(newsItem);
+    });
+}
+
+// Function to populate articles section
+function loadArticlesSection(articles) {
+    const articlesContent = document.querySelector('.articles-content');
+    if (!articlesContent) return;
+    articlesContent.innerHTML = '';
+    const mainArticles = articles.slice(0, 2);
+    mainArticles.forEach(article => {
+        const articleElement = document.createElement('a');
+        articleElement.href = `article.html?id=${article.id}`;
+        articleElement.className = 'news-article-content';
+        const formattedDate = new Date(article.time).toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+        articleElement.innerHTML = `
+            <h2 class="headline-h2">${article.title}</h2>
+            <p class="date"><i class="fas fa-calendar"></i> ${formattedDate}</p>
+            <p class="content-p">${article.summary}</p>
+        `;
+        articlesContent.appendChild(articleElement);
+    });
+}
+
+// Function to populate news section
+function loadNewsSection(articles) {
+    const newsList = document.querySelector('.news-list');
+    if (!newsList) return;
+    newsList.innerHTML = '';
+    articles.forEach(article => {
+        const newsItem = document.createElement('article');
+        newsItem.className = 'news-item';
+        newsItem.innerHTML = `
+            <img src="${article.image}" alt="${article.title}" onerror="this.src=' https://via.placeholder.com/400x300?text=Image+Not+Available'">
+            <div class="news-content">
+                <h2 class="headline-h2">${article.title}</h2>
+                <p class="content-p">${article.summary}</p>
+                <a href="article.html?id=${article.id}" class="read-more">Read more</a>
+            </div>
+        `;
+        newsList.appendChild(newsItem);
+    });
+}
+
+// Function to get URL parameters
+function getUrlParameter(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+}
+
+// Function to load individual article (for article.html page)
+async function loadArticle() {
+    const articleId = getUrlParameter('id');
+    if (!articleId) {
+        document.getElementById('article-content').innerHTML = `
+            <div class="error-message">
+                <h2>Article Not Found</h2>
+                <p>No article ID provided.</p>
+                <a href="index.html" class="back-button">Return to Home</a>
+            </div>
+        `;
+        return;
+    }
+
+    try {
+        const sheetUrl = ' https://docs.google.com/spreadsheets/d/e/2PACX-1vR73gUvLR_1q90O5u6YmRwOLZ-m_5mojazXV0YPbreoV0_dJH3sv4vHxRcDcARi3ynzeYJ3a0UFjwTp/pubhtml?gid=0&single=true';
+
+        const response = await fetch(sheetUrl);
+        const text = await response.text();
+        const data = parseSheetHtml(text);
+
+        const article = data.find(a => a.id == articleId);
+        if (!article) {
+            document.getElementById('article-content').innerHTML = `
+                <div class="error-message">
+                    <h2>Article Not Found</h2>
+                    <p>The requested article could not be found.</p>
+                    <a href="index.html" class="back-button">Return to Home</a>
+                </div>
+            `;
+            return;
+        }
+
+        const formattedDate = new Date(article.time).toLocaleDateString('en-US', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+
+        document.title = `${article.title} - The Batroun Times`;
+
+        document.getElementById('article-content').innerHTML = `
+            <div class="article-header">
+                <span class="article-category">${article.category.toUpperCase()}</span>
+                <h1 class="title">${article.title}</h1>
+                <div class="article-meta">
+                    <p class="date"><i class="fas fa-calendar"></i> ${formattedDate}</p>
+                </div>
+            </div>
+            <div class="article-image">
+                <img src="${article.image}" alt="${article.title}" onerror="this.src=' https://via.placeholder.com/800x400?text=Image+Not+Available'">
+            </div>
+            <div class="article-body">
+                <div class="content-p"><p><strong>${article.summary}</strong></p></div>
+                <div class="content-p">${article.content.split('\n').map(p => `<p>${p}</p>`).join('')}</div>
+            </div>
+            <div class="article-footer">
+                <div class="article-share">
+                    <h4>Share this article:</h4>
+                    <div class="share-buttons">
+                        <a href="#" class="share-btn facebook" onclick="shareOnFacebook('${article.title}', window.location.href)">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="share-btn twitter" onclick="shareOnTwitter('${article.title}', window.location.href)">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="share-btn linkedin" onclick="shareOnLinkedIn('${article.title}', window.location.href)">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        loadRelatedArticles(data, article.category, article.id);
+    } catch (error) {
+        console.error('Error loading article:', error);
+        document.getElementById('article-content').innerHTML = `
+            <div class="error-message">
+                <h2>Error Loading Article</h2>
+                <p>There was an error loading the article. Please try again later.</p>
+                <a href="index.html" class="back-button">Return to Home</a>
+            </div>
+        `;
+    }
+}
+
+// Function to load related articles
+function loadRelatedArticles(articles, category, currentArticleId) {
+    const relatedContainer = document.querySelector('.related-articles-list');
+    if (!relatedContainer) return;
+
+    const relatedArticles = articles
+        .filter(article => article.category === category && article.id != currentArticleId)
+        .slice(0, 3);
+
+    if (relatedArticles.length === 0) {
+        relatedContainer.innerHTML = '<p>No related articles found.</p>';
+        return;
+    }
+
+    relatedContainer.innerHTML = '';
+    relatedArticles.forEach(article => {
+        const formattedDate = new Date(article.time).toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric'
+        });
+
+        const relatedItem = document.createElement('div');
+        relatedItem.className = 'related-article-item';
+        relatedItem.innerHTML = `
+            <a href="article.html?id=${article.id}">
+                <img src="${article.image}" alt="${article.title}" onerror="this.src=' https://via.placeholder.com/200x150?text=Image+Not+Available'">
+                <div class="related-article-content">
+                    <h4 class="headline-h2">${article.title}</h4>
+                    <p class="date">${formattedDate}</p>
+                    <p class="content-p">${article.summary.substring(0, 100)}...</p>
+                </div>
+            </a>
+        `;
+        relatedContainer.appendChild(relatedItem);
+    });
+}
+
+// Social sharing functions
+function shareOnFacebook(title, url) {
+    window.open(` https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank');
+}
+function shareOnTwitter(title, url) {
+    window.open(` https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`, '_blank');
+}
+function shareOnLinkedIn(title, url) {
+    window.open(` https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank');
+}
+
+// Initialize based on current page
+document.addEventListener('DOMContentLoaded', function () {
+    if (window.location.pathname.includes('article.html')) {
+        loadArticle();
+    } else {
+        loadNewsData();
+    }
+});
