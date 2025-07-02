@@ -147,7 +147,7 @@ section {
 
 .info-icon i {
   font-size: var(--article-font-size);
-  color: var(--color-primary);
+  color: var(--color-secondary);
 }
 
 .hover-info {
@@ -189,7 +189,7 @@ background: transparent;
   font-weight: 400;
   font-family: var(--font);
   font-size: var(--big-font-size);
-  color: var(--color-primary);
+  color: var(--color-secondary);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -228,7 +228,7 @@ nav ul li a.active {
   display: none;
   font-size: var(--normal-font-size);
   cursor: pointer;
-  color: var(--color-primary);
+  color: var(--color-secondary);
   background: none;
   border: none;
 }
