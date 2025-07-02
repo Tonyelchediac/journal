@@ -178,7 +178,7 @@ section {
 
 .to-day{
   font-size: var(--article-font-size);
-  color: var(--color-content);
+  color: var(--color-secondary);
 }
 
 .subcsription-button{
