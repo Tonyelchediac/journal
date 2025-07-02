@@ -174,7 +174,6 @@ section {
   align-items: center;
   padding: 10px 20px;
   background: var(--first-background-color);
-color: var(--color-secondary);
 }
 
 .to-day{
@@ -184,6 +183,7 @@ color: var(--color-secondary);
 
 .subcsription-button{
 background: transparent;
+  color: var(--color-secondary);
 }
 
 .header-title {
