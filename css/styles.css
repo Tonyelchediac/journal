@@ -181,6 +181,10 @@ section {
   color: var(--color-content);
 }
 
+.subcsription-button{
+background: transparent;
+}
+
 .header-title {
   font-weight: 400;
   font-family: var(--font);
