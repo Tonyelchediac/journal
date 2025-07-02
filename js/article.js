@@ -6,7 +6,7 @@ async function loadNewsData() {
         
         window.articlesData = data.articles;
 
-        // Load sections with specific row ranges
+        // Load sections with specific row ranges and category filtering
         loadBreakingNews(data.articles);
         loadArticlesSection(data.articles);
         loadSmallArticlesSection(data.articles);
@@ -16,14 +16,39 @@ async function loadNewsData() {
     }
 }
 
-// Function to populate breaking news section (first 10 rows)
+// Define allowed categories for news sections
+const NEWS_CATEGORIES = [
+    'news',
+    'world news',
+    'politics',
+    'variety news',
+    'technology',
+    'economy',
+    'sport',
+    'education and culture',
+    'health and science'
+];
+
+const ARTICLES_CATEGORIES = ['articles'];
+
+// Function to populate breaking news section (first 10 rows from news categories only)
 function loadBreakingNews(articles) {
     const breakingNewsContainer = document.querySelector('.breaking-news');
     if (!breakingNewsContainer) return;
     breakingNewsContainer.innerHTML = '';
     
-    // First 10 rows (index 0-9)
-    const breakingNewsArticles = articles.slice(0, 10);
+    // Filter articles by news categories first, then take first 10
+    const newsArticles = articles.filter(article => 
+        NEWS_CATEGORIES.includes(article.category.toLowerCase())
+    );
+    
+    const breakingNewsArticles = newsArticles.slice(0, 10);
+    
+    if (breakingNewsArticles.length === 0) {
+        breakingNewsContainer.innerHTML = '<div class="loading">No breaking news available</div>';
+        return;
+    }
+    
     breakingNewsArticles.forEach(article => {
         const newsItem = document.createElement('a');
         newsItem.href = `article.html?id=${article.id}`;
@@ -35,20 +60,34 @@ function loadBreakingNews(articles) {
         });
         newsItem.innerHTML = `
             <h2 class="headline-h2">${article.title}</h2>
-            <p class="date"><i class="fas fa-calendar"></i> ${formattedDate}</p>
+            <div class="breaking-news-content">
+                <p class="date"><i class="fa fa-calendar"></i> ${formattedDate}</p>
+                <p class="date"><i class="fa fa-info-circle"></i> ${article.category}</p>
+            </div>
         `;
         breakingNewsContainer.appendChild(newsItem);
     });
 }
 
-// Function to populate articles section (rows 11 and 12)
+// Function to populate articles section (articles category only)
 function loadArticlesSection(articles) {
     const articlesContent = document.querySelector('.articles-content');
     if (!articlesContent) return;
     articlesContent.innerHTML = '';
     
-    // Rows 11 and 12 (index 10-11)
-    const mainArticles = articles.slice(10, 12);
+    // Filter articles by "articles" category only
+    const articlesCategoryArticles = articles.filter(article => 
+        ARTICLES_CATEGORIES.includes(article.category.toLowerCase())
+    );
+    
+    // Take first 2 articles from the filtered results
+    const mainArticles = articlesCategoryArticles.slice(0, 2);
+    
+    if (mainArticles.length === 0) {
+        articlesContent.innerHTML = '<div class="loading">No articles available</div>';
+        return;
+    }
+    
     mainArticles.forEach(article => {
         const articleElement = document.createElement('a');
         articleElement.href = `article.html?id=${article.id}`;
@@ -67,14 +106,25 @@ function loadArticlesSection(articles) {
     });
 }
 
-// Function to populate small articles section (rows 13 to 23)
+// Function to populate small articles section (articles category only)
 function loadSmallArticlesSection(articles) {
     const smallArticlesContent = document.querySelector('.small-articles-content');
     if (!smallArticlesContent) return;
     smallArticlesContent.innerHTML = '';
     
-    // Rows 13 to 23 (index 12-22)
-    const smallArticles = articles.slice(12, 23);
+    // Filter articles by "articles" category only
+    const articlesCategoryArticles = articles.filter(article => 
+        ARTICLES_CATEGORIES.includes(article.category.toLowerCase())
+    );
+    
+    // Skip first 2 and take next 11 articles (index 2-12)
+    const smallArticles = articlesCategoryArticles.slice(2, 13);
+    
+    if (smallArticles.length === 0) {
+        smallArticlesContent.innerHTML = '<div class="loading">No additional articles available</div>';
+        return;
+    }
+    
     smallArticles.forEach(article => {
         const articleElement = document.createElement('article');
         articleElement.className = 'small-article-content';
@@ -104,7 +154,7 @@ function generateMediaHTML(article, size = 'default') {
     if (hasImage) {
         return `<img src="${article.image}" alt="${article.title}" onerror="this.src='https://via.placeholder.com/${placeholderSize}?text=Image+Not+Available'">`;
     } else if (hasVideo) {
-        return `<video controls style="width: 100%; height: auto;">
+        return `<video controls style="width: 100%;">
                     <source src="${article.video}" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>`;
@@ -113,33 +163,40 @@ function generateMediaHTML(article, size = 'default') {
     }
 }
 
-// Function to populate news section (all rows from first, excluding "articles" category)
+// Function to populate news section (news categories only)
 function loadNewsSection(articles) {
     const newsList = document.querySelector('.news-list');
     if (!newsList) return;
     newsList.innerHTML = '';
     
-    // Exclude articles with category "articles"
-    articles
-        .filter(article => article.category !== 'articles')
-        .forEach(article => {
-            const newsItem = document.createElement('article');
-            newsItem.className = 'news-item';
-            
-            const mediaHTML = generateMediaHTML(article);
+    // Filter articles by news categories only
+    const newsArticles = articles.filter(article => 
+        NEWS_CATEGORIES.includes(article.category.toLowerCase())
+    );
+    
+    if (newsArticles.length === 0) {
+        newsList.innerHTML = '<div class="loading">No news available</div>';
+        return;
+    }
+    
+    newsArticles.forEach(article => {
+        const newsItem = document.createElement('article');
+        newsItem.className = 'news-item';
+        
+        const mediaHTML = generateMediaHTML(article);
 
-            const readMoreLink = `<a href="article.html?id=${article.id}" class="read-more">Read more</a>`;
+        const readMoreLink = `<a href="article.html?id=${article.id}" class="read-more">Read more</a>`;
 
-            newsItem.innerHTML = `
-                ${mediaHTML}
-                <div class="news-content">
-                    <h2 class="headline-h2">${article.title}</h2>
-                    <p class="content-p">${article.summary}</p>
-                    ${readMoreLink}
-                </div>
-            `;
-            newsList.appendChild(newsItem);
-        });
+        newsItem.innerHTML = `
+            ${mediaHTML}
+            <div class="news-content">
+                <h2 class="headline-h2">${article.title}</h2>
+                <p class="content-p">${article.summary}</p>
+                ${readMoreLink}
+            </div>
+        `;
+        newsList.appendChild(newsItem);
+    });
 }
 
 // Function to get URL parameters
@@ -178,6 +235,19 @@ async function loadArticle() {
             return;
         }
 
+        // Check if article category is allowed to be displayed
+        const allowedCategories = [...NEWS_CATEGORIES, ...ARTICLES_CATEGORIES];
+        if (!allowedCategories.includes(article.category.toLowerCase())) {
+            document.getElementById('article-content').innerHTML = `
+                <div class="error-message">
+                    <h2>Article Not Available</h2>
+                    <p>This article is not available for viewing.</p>
+                    <a href="index.html" class="back-button">Return to Home</a>
+                </div>
+            `;
+            return;
+        }
+
         const formattedDate = new Date(article.date).toLocaleDateString('en-US', {
             weekday: 'long',
             year: 'numeric',
@@ -197,6 +267,7 @@ async function loadArticle() {
                 <h2>${article.title}</h2>
                 <div class="article-meta">
                     <p class="date"><i class="fas fa-calendar"></i> ${formattedDate}</p>
+                    <p class="date"><i class="fas fa-user"></i> ${article.author}</p>
                 </div>
             </div>
             ${mediaSection}
@@ -212,10 +283,10 @@ async function loadArticle() {
                             <i class="fab fa-facebook-f"></i>
                         </a>
                         <a href="#" class="share-btn twitter" onclick="shareOnTwitter('${article.title}', window.location.href)">
-                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-x-twitter"></i>
                         </a>
-                        <a href="#" class="share-btn linkedin" onclick="shareOnLinkedIn('${article.title}', window.location.href)">
-                            <i class="fab fa-linkedin-in"></i>
+                        <a href="#" class="share-btn whatsapp" onclick="shareOnWhatsapp('${article.title}', window.location.href)">
+                            <i class="fab fa-whatsapp"></i>
                         </a>
                     </div>
                 </div>
@@ -240,8 +311,19 @@ function loadRelatedArticles(articles, category, currentArticleId) {
     const relatedContainer = document.querySelector('.related-articles-list');
     if (!relatedContainer) return;
 
+    // Only show related articles if the category is allowed
+    const allowedCategories = [...NEWS_CATEGORIES, ...ARTICLES_CATEGORIES];
+    if (!allowedCategories.includes(category.toLowerCase())) {
+        relatedContainer.innerHTML = '<p>No related articles found.</p>';
+        return;
+    }
+
     const relatedArticles = articles
-        .filter(article => article.category === category && article.id != currentArticleId)
+        .filter(article => 
+            article.category.toLowerCase() === category.toLowerCase() && 
+            article.id != currentArticleId &&
+            allowedCategories.includes(article.category.toLowerCase())
+        )
         .slice(0, 3);
 
     if (relatedArticles.length === 0) {
@@ -282,8 +364,9 @@ function shareOnFacebook(title, url) {
 function shareOnTwitter(title, url) {
     window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`, '_blank');
 }
-function shareOnLinkedIn(title, url) {
-    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank');
+function shareOnWhatsapp(title, url) {
+    const message = `Batroun Times\n\n*${title}*\n\nRead more:\n${url}`;
+    window.open(`https://wa.me/?text=${encodeURIComponent(message)}`, '_blank');
 }
 
 // Initialize based on current page

@@ -51,10 +51,6 @@ article p.date,
   color: var(--border-color);
 }
 
-.fa-calendar {
-  margin-right: 5px;
-}
-
 button {
   display: flex;
   padding: 7.5px 15px;
@@ -269,7 +265,7 @@ nav ul li a.active {
 }
 
 .image-article h2 {
-  font-size: var(--medium-font-size);
+  font-size: 3.5rem;
   font-weight: 400;
   margin-bottom: 10px;
   font-family: var(--font);
@@ -297,6 +293,11 @@ nav ul li a.active {
   margin: 0 20px;
   padding: 10px;
   display: block;
+}
+
+.home-right-side .breaking-news-content{
+  display: flex;
+  gap: 10px;
 }
 
 /* articles section */
@@ -356,12 +357,13 @@ nav ul li a.active {
   border-radius: 10px;
   min-width: 300px;
   max-width: 350px;
+  height: 400px;
   flex: 0 0 auto;
   display: flex;
   flex-direction: column;
 }
 
-.news-item img {
+.news-item img, .news-list video {
   width: 100%;
   height: 180px;
   object-fit: cover;
@@ -376,11 +378,180 @@ nav ul li a.active {
   flex: 1;
 }
 
+.news-content p{
+  overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+/* footer */
+footer {
+  border-top: 6px double var(--color-primary);
+  background: var(--main-background-color);
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.footer-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-logo img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.footer-links a {
+  color: var(--color-primary);
+  font-weight: bold;
+  text-decoration: none;
+  font-size: var(--article-font-size);
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--color-content);
+}
+
+.footer-newsletter {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 400px;
+}
+
+.footer-newsletter h3 {
+  font-size: var(--normal-font-size);
+  font-family: var(--font);
+  color: var(--color-content);
+  margin-bottom: 12px;
+  font-weight: 400;
+}
+
+.footer-newsletter form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.footer-newsletter input{
+  border: 1px solid var(--color-primary);
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  font-family: inherit;
+}
+
+.footer-newsletter button {
+  padding: 8px 18px;
+  width: 50%;
+  background: var(--color-content);
+  color: var(--color-secondary);
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.footer-newsletter button:hover {
+  background: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+.footer-social {
+  margin: 0 0 1rem 0;
+  display: flex;
+  gap: 10px;
+}
+
+.footer-social a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.footer-social a i {
+  font-size: 0.8em;
+}
+
+.footer-social a:hover {
+  background: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+.footer-copyright {
+  padding: 20px 0;
+  border-top: 1px solid var(--color-primary);
+  font-size: 0.95rem;
+  color: var(--color-primary);
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Responsive Footer */
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+  }
+  .footer-newsletter {
+    max-width: 100%;
+  }
+}
+
+
+
 /* Responsive styles */
 @media (max-width: 900px) {
   :root {
     --medium-font-size: 2.5rem;
-    --midnormal-font-size: 1.5rem;
+    --midnormal-font-size: 2rem;
     --normal-font-size: 1.2rem;
     --article-font-size: 1rem;
   }
@@ -549,7 +720,11 @@ nav ul li a.active {
   line-height: 1.5;
 }
 
-#article-content img {
+#article-content .article-category{
+  font-size: 0.8rem;
+}
+
+#article-content img, #article-content video {
   display: block;
   max-width: 100%;
   min-height: 250px;
@@ -568,6 +743,10 @@ nav ul li a.active {
   font-size: 1.1em;
   padding: 24px 0;
   justify-content: center;
+}
+
+.article-share{
+  margin-top: 4rem;
 }
 
 .share-buttons {
@@ -630,11 +809,14 @@ nav ul li a.active {
   min-width: 180px;
 }
 
-.related-articles-list a img{
+.related-articles-list a img,
+.related-articles-list a video {
+  display: block;
   max-width: 100%;
   min-height: 250px;
   max-height: 300px;
   object-fit: cover;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 900px) {

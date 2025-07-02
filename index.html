@@ -25,13 +25,13 @@
                 <i class="fas fa-info-circle"></i>
                 <div class="hover-info">
                     <p>VOL. CL</p>
-                    <p>No. 3</p>
+                    <p>No. 4</p>
                 </div>
             </div>
             <div class="header-top-content">
                 <p class="vol">VOL. CL</p>
                 <h1 class="header-title">The Batroun Times</h1>
-                <p class="no">No. 3</p>
+                <p class="no">No. 4</p>
 
             </div>
 
@@ -59,7 +59,9 @@
         </div>
         <div class="date-and-subscription">
             <p class="to-day"></p>
+            <a href="#subscription">
             <button class="subcsription-button">subscription to more content</button>
+            </a>
         </div>
     </header>
 
@@ -73,8 +75,8 @@
                         alt="Lebanese Kobayat Fire">
                     <article class="image-article">
                         <h2 class="headline-h2">The town of Qobayat in Akkar is under fire again! </h2>
-                        <p class="content-p">The Lebanese Presidential Palace, also known as Baabda Palace, serves as the official residence and workplace of the President of Lebanon. Located in the Baabda district southeast of Beirut, the palace is an important center for political activity and state ceremonies. Constructed in the 1960s, Baabda Palace features a blend of modern and traditional Lebanese architectural styles, surrounded by lush gardens and scenic views of the capital. The palace hosts official meetings, diplomatic receptions, and national celebrations, reflecting its role as a symbol of Lebanese sovereignty and unity.</p>
-                    </article>
+                        <p class="content-p">A massive wildfire has erupted in the forests surrounding Qobayat, Akkar, threatening homes, wildlife, and agricultural lands. Local authorities and volunteers are working tirelessly to contain the blaze, while residents are urged to stay alert and follow safety instructions. The incident highlights the urgent need for better forest management and emergency preparedness in the region.</p></article>
+                    <a href="" class="read-more">Read more</a>
                 </div>
 
                 <div class="home-right-side">
@@ -86,8 +88,8 @@
 
                     <div class="breaking-news">
                         <a class="new">
-                            <h2 class="headline-h2">${article.title}</h2>
-                            <p class="date"><i class="fas fa-calendar"></i> ${formattedDate}</p>
+                            <h2 class="headline-h2">title</h2>
+                            <p class="date"><i class="fas fa-calendar"></i>date</p>
                         </a>
                         <!-- Content will be loaded dynamically from JSON -->
                         <div class="loading">Loading breaking news...</div>
@@ -102,7 +104,7 @@
         <section id="articles">
 
             <div class="articles-container">
-                <h2 class="title">News Articles</h2>
+                <h2 class="title">Articles</h2>
 
                 <div class="articles-content">
                     <a href="" class="news-article-content">
@@ -329,9 +331,38 @@
                 </div>
             </div>
         </section>
-
-
     </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="The Batroun Times Logo" height="40">
+                <span class="title">The Batroun Times</span>
+            </div>
+            <div class="footer-links">
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+                <a href="#">Advertise</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <div class="footer-newsletter" id="subscription">
+                <h3>Subscribe to Our Newsletter</h3>
+                <form>
+                    <input type="email" placeholder="Enter your email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            &copy; 2024 The Batroun Times. All rights reserved.
+        </div>
+    </footer>
 
 </body>
 

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JSON Object Builder</title>
+  <style>
+    body {
+      font-family: "Courier New", Courier, monospace;
+      background-color: #f9f9f9;
+      padding: 20px;
+      color: #333;
+    }
+
+    h2 {
+      font-family: sans-serif;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 14px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 10px;
+      margin-right: 10px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    pre {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+      overflow-x: auto;
+      white-space: pre-wrap;
+    }
+
+    .key { color: #66d9ef; }
+    .string { color: #e6db74; }
+    .number { color: #ae81ff; }
+    .boolean { color: #fd971f; }
+  </style>
+</head>
+<body>
+
+  <h2>Enter Content Details</h2>
+
+  <div class="form-group"><label>ID:</label><input type="number" id="idInput"></div>
+  <div class="form-group"><label>Title:</label><input type="text" id="titleInput"></div>
+  <div class="form-group"><label>Summary:</label><input type="text" id="summaryInput"></div>
+  <div class="form-group"><label>Content:</label><textarea id="contentInput"></textarea></div>
+  <div class="form-group"><label>Image URL:</label><input type="text" id="imageInput"></div>
+  <div class="form-group"><label>Video URL:</label><input type="text" id="videoInput"></div>
+<div class="form-group">
+  <label for="categorySelect">Category:</label>
+  <select name="category" id="categorySelect">
+    <option value="news">News</option>
+    <option value="world news">World News</option>
+    <option value="politics">Politics</option>
+    <option value="economy">Economy</option>
+    <option value="technology">Technology</option>
+    <option value="sport">Sport</option>
+    <option value="health and science">Health and Science</option>
+    <option value="education and culture">Education and Culture</option>
+    <option value="variety news">Variety News</option>
+    <option value="lifestyle">Lifestyle</option>
+    <option value="official ads">Official Ads</option>
+    <option value="sale or rent">Sale or Rent</option>
+    <option value="games">Games</option>
+    <option value="articles">Articles</option>
+  </select>
+</div>
+  <div class="form-group"><label>Date (YYYY-MM-DD):</label><input type="text" id="dateInput"></div>
+  <div class="form-group"><label>Author Name:</label><input type="text" id="authorInput"></div>
+
+  <button onclick="generateObject()">Display Object</button>
+  <button onclick="copyToClipboard()">Copy to Clipboard</button>
+
+  <h2>Generated Output</h2>
+  <pre id="output">{ }</pre>
+
+  <script>
+    let latestJSONString = "";
+
+    function syntaxHighlight(json) {
+      json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      return json.replace(
+        /("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|\d+)/g,
+        function (match) {
+          let cls = 'number';
+          if (/^"/.test(match)) {
+            cls = /:$/.test(match) ? 'key' : 'string';
+          } else if (/true|false/.test(match)) {
+            cls = 'boolean';
+          } else if (/null/.test(match)) {
+            cls = 'null';
+          }
+          return `<span class="${cls}">${match}</span>`;
+        }
+      );
+    }
+
+    function generateObject() {
+      const obj = {
+        id: parseInt(document.getElementById("idInput").value),
+        title: document.getElementById("titleInput").value,
+        summary: document.getElementById("summaryInput").value,
+        content: document.getElementById("contentInput").value,
+        image: document.getElementById("imageInput").value,
+        video: document.getElementById("videoInput").value,
+        category: document.getElementById("categorySelect").value,
+        date: document.getElementById("dateInput").value,
+        author: document.getElementById("authorInput").value,
+      };
+
+      latestJSONString = JSON.stringify(obj, null, 2);
+      document.getElementById("output").innerHTML = syntaxHighlight(latestJSONString);
+    }
+
+    function copyToClipboard() {
+      if (!latestJSONString) {
+        alert("Nothing to copy. Please generate the object first.");
+        return;
+      }
+
+      navigator.clipboard.writeText(latestJSONString).then(() => {
+        alert("JSON copied to clipboard!");
+      }).catch(err => {
+        alert("Failed to copy: " + err);
+      });
+    }
+  </script>
+
+</body>
+</html>
