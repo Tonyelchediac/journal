@@ -8,11 +8,11 @@
 }
 
 :root {
-  --color-primary: #f0f0f0;
+  --color-primary: #ffffff;
   --color-secondary: #ffffff;
-  --color-content: darkred;
+  --color-content: #F3FAFE;
   --main-background-color: #3485BA;
-  --first-background-color: #cdcdcd;
+  --first-background-color: #3FA1E1;
   --border-color: #9f8a8a;
   --scroll-color: #bebebe;
   --font: "Manufacturing Consent", system-ui;
