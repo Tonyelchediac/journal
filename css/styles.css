@@ -361,7 +361,7 @@ nav ul li a.active {
   border-radius: 10px;
   min-width: 300px;
   max-width: 350px;
-  height: 400px;
+  height: auto;
   flex: 0 0 auto;
   display: flex;
   flex-direction: column;
