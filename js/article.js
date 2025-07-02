@@ -111,33 +111,37 @@ function loadSmallArticlesSection(articles) {
     const smallArticlesContent = document.querySelector('.small-articles-content');
     if (!smallArticlesContent) return;
     smallArticlesContent.innerHTML = '';
-    
+
     // Filter articles by "articles" category only
     const articlesCategoryArticles = articles.filter(article => 
         ARTICLES_CATEGORIES.includes(article.category.toLowerCase())
     );
-    
+
     // Skip first 2 and take next 11 articles (index 2-12)
     const smallArticles = articlesCategoryArticles.slice(2, 13);
-    
+
     if (smallArticles.length === 0) {
         smallArticlesContent.innerHTML = '<div class="loading">No additional articles available</div>';
         return;
     }
-    
+
     smallArticles.forEach(article => {
-        const articleElement = document.createElement('article');
+        const articleElement = document.createElement('a'); // Changed from 'article' to 'a'
+        articleElement.href = `article.html?id=${article.id}`;
         articleElement.className = 'small-article-content';
+
         const formattedDate = new Date(article.date).toLocaleDateString('en-US', {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
         });
+
         articleElement.innerHTML = `
             <h2 class="headline-h2">${article.title}</h2>
             <p class="date"><i class="fas fa-calendar"></i> ${formattedDate}</p>
             <p class="content-p">${article.summary}</p>
         `;
+
         smallArticlesContent.appendChild(articleElement);
     });
 }
