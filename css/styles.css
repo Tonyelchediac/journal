@@ -251,7 +251,7 @@ nav ul li a.active {
 
 .home-left-side img {
   width: 100%;
-  max-height: 250px;
+  max-height: 350px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -659,6 +659,10 @@ footer {
 
   .home-left-side{
     display: block;
+  }
+
+  .home-left-side img{
+    max-height: 200px;
   }
   
   .image-article{
