@@ -370,7 +370,7 @@ function shareOnTwitter(title, url) {
     window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`, '_blank');
 }
 function shareOnWhatsapp(title, url) {
-    const message = `Batroun Times\n\n*${title}*\n\nRead more:\n${url}`;
+    const message = `B Times\n\n*${title}*\n\nRead more:\n${url}`;
     window.open(`https://wa.me/?text=${encodeURIComponent(message)}`, '_blank');
 }
 
