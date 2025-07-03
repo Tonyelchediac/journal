@@ -1,6 +1,17 @@
 {
   "articles": [
 {
+  "id": 31,
+  "title": "A car crashed off a steep slope, killing the driver.",
+  "summary": "",
+  "content": "Samar Malik Rizk from Habaleen - Jbeil, a victim of a car accident between Saghar and Ain Kfaa. May God have mercy on her soul.",
+  "image": "https://sbclaims.co.uk/wp-content/uploads/elementor/thumbs/iStock-1006045926-pkjyfw1ojs2s9wmrglmg7uf53yg59exz8fhv987yas.jpg",
+  "video": "",
+  "category": "news",
+  "date": "2025-07-03",
+  "author": "B Times"
+},
+{
   "id": 30,
   "title": "Batroun: Traffic accident at Batroun Chekka hwy.",
   "summary": "A traffic accident after the Hamat tunnel happened",
