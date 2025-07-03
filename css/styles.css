@@ -580,34 +580,33 @@ footer {
     font-size: 1.8rem;
   }
 
-  nav ul {
-    position: absolute;
-    top: 50px;
-    right: 0;
-    left: auto;
-    width: 100%;
-    height: auto;
-    background-color: var(--main-background-color);
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    padding: 20px 20px;
-    margin: 0;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
-    z-index: 10;
-  }
+nav ul {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: var(--main-background-color);
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 20px;
+  margin: 0;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 10;
+  display: flex;
+}
+
+nav ul.show {
+  transform: translateX(0);
+}
+
 
   nav ul li a {
     text-decoration: none;
     display: block;
     width: 100%;
-  }
-
-  nav ul.show {
-    display: flex;
-    transform: translateX(0);
   }
 
   .hamburger {
@@ -784,15 +783,14 @@ footer {
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
+  transition: all 0.2s ease;
 }
 
 .share-btn i {
   font-size: 1.1em;
 }
 
-.share-btn.facebook:hover,
-.share-btn.twitter:hover,
-.share-btn.linkedin:hover {
+.share-btn:hover {
   background: var(--color-primary);
   color: var(--color-secondary);
 }
@@ -827,9 +825,8 @@ footer {
 .related-articles-list a img,
 .related-articles-list a video {
   display: block;
-  max-width: 100%;
-  min-height: 250px;
-  max-height: 300px;
+  width: 400px;
+  height: 300px;
   object-fit: cover;
   margin-bottom: 10px;
 }
@@ -842,6 +839,15 @@ footer {
   .related-articles-list {
     gap: 12px;
   }
+
+  .related-articles-list a img,
+.related-articles-list a video {
+  display: block;
+  max-width: 100%;
+  height: 250px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
 }
 
 @media (max-width: 600px) {
