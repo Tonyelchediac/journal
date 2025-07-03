@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <title>JSON Object Builder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     body {
       font-family: "Courier New", Courier, monospace;
       background-color: #f9f9f9;
       padding: 20px;
       color: #333;
+      margin: 0;
     }
 
     h2 {
@@ -31,6 +33,8 @@
       font-size: 14px;
       border: 1px solid #ccc;
       border-radius: 5px;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     textarea {
@@ -61,16 +65,39 @@
       margin-top: 20px;
       overflow-x: auto;
       white-space: pre-wrap;
+      word-break: break-word;
     }
 
     .key { color: #66d9ef; }
     .string { color: #e6db74; }
     .number { color: #ae81ff; }
     .boolean { color: #fd971f; }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+      h2 {
+        font-size: 1.2em;
+      }
+      input, select, textarea {
+        font-size: 16px;
+        padding: 10px;
+      }
+      button {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+      pre {
+        padding: 10px;
+        font-size: 13px;
+      }
+    }
   </style>
 </head>
 <body>
-
+  <!-- ...rest of your HTML remains unchanged... -->
   <h2>Enter Content Details</h2>
 
   <div class="form-group"><label>ID:</label><input type="number" id="idInput"></div>
@@ -79,25 +106,25 @@
   <div class="form-group"><label>Content:</label><textarea id="contentInput"></textarea></div>
   <div class="form-group"><label>Image URL:</label><input type="text" id="imageInput"></div>
   <div class="form-group"><label>Video URL:</label><input type="text" id="videoInput"></div>
-<div class="form-group">
-  <label for="categorySelect">Category:</label>
-  <select name="category" id="categorySelect">
-    <option value="news">News</option>
-    <option value="world news">World News</option>
-    <option value="politics">Politics</option>
-    <option value="economy">Economy</option>
-    <option value="technology">Technology</option>
-    <option value="sport">Sport</option>
-    <option value="health and science">Health and Science</option>
-    <option value="education and culture">Education and Culture</option>
-    <option value="variety news">Variety News</option>
-    <option value="lifestyle">Lifestyle</option>
-    <option value="official ads">Official Ads</option>
-    <option value="sale or rent">Sale or Rent</option>
-    <option value="games">Games</option>
-    <option value="articles">Articles</option>
-  </select>
-</div>
+  <div class="form-group">
+    <label for="categorySelect">Category:</label>
+    <select name="category" id="categorySelect">
+      <option value="news">News</option>
+      <option value="world news">World News</option>
+      <option value="politics">Politics</option>
+      <option value="economy">Economy</option>
+      <option value="technology">Technology</option>
+      <option value="sport">Sport</option>
+      <option value="health and science">Health and Science</option>
+      <option value="education and culture">Education and Culture</option>
+      <option value="variety news">Variety News</option>
+      <option value="lifestyle">Lifestyle</option>
+      <option value="official ads">Official Ads</option>
+      <option value="sale or rent">Sale or Rent</option>
+      <option value="games">Games</option>
+      <option value="articles">Articles</option>
+    </select>
+  </div>
   <div class="form-group"><label>Date (YYYY-MM-DD):</label><input type="text" id="dateInput"></div>
   <div class="form-group"><label>Author Name:</label><input type="text" id="authorInput"></div>
 
@@ -158,6 +185,5 @@
       });
     }
   </script>
-
 </body>
 </html>
