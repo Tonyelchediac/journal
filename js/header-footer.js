@@ -20,19 +20,17 @@ document.addEventListener('DOMContentLoaded', ()=>{
             <nav>
                 <ul id="nav-list">
                     <li><a href="#all" class="active">News</a></li>
-                    <li><a href="">World News</a></li>
+                    <li><a href="">Events</a></li>
                     <li><a href="">Politics</a></li>
-                    <li><a href="">Economy</a></li>
                     <li><a href="">Articles</a></li>
-                    <li><a href="">Official Ads</a></li>
+                    <li><a href="">Ads</a></li>
                     <li><a href="">Sport</a></li>
                     <li><a href="">Technology</a></li>
                     <li><a href="">Lifestyle</a></li>
-                    <li><a href="">Health and Science</a></li>
-                    <li><a href="">Sale or Rent</a></li>
                     <li><a href="games.html">Games</a></li>
+                    <li><a href="">Sale and Rent</a></li>
+                    <li><a href="">Health and Science</a></li>
                     <li><a href="">Education and Culture</a></li>
-                    <li><a href="">Variety News</a></li>
                 </ul>
             </nav>
             <div class="hamburger" id="hamburger">

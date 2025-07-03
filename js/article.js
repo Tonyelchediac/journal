@@ -19,14 +19,15 @@ async function loadNewsData() {
 // Define allowed categories for news sections
 const NEWS_CATEGORIES = [
     'news',
-    'world news',
+    'events',
     'politics',
-    'variety news',
+    'ads',
+    'sports',
     'technology',
-    'economy',
-    'sport',
-    'education and culture',
-    'health and science'
+    'lifestyle',
+    'health and science',
+    'sale and rent',
+    'education and culture'
 ];
 
 const ARTICLES_CATEGORIES = ['articles'];
@@ -126,7 +127,7 @@ function loadSmallArticlesSection(articles) {
     }
 
     smallArticles.forEach(article => {
-        const articleElement = document.createElement('a'); // Changed from 'article' to 'a'
+        const articleElement = document.createElement('a');
         articleElement.href = `article.html?id=${article.id}`;
         articleElement.className = 'small-article-content';
 
