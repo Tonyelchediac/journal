@@ -1,6 +1,39 @@
 {
   "articles": [
 {
+  "id": 15,
+  "title": "The road is closed on Sunday 6",
+  "summary": "The main road of Batroun are closed on Sunday July 6, from 6:00 to 8:00AM",
+  "content": "For more information:\n@BATROUNRACE\nCall: +961 81 30 06 25",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_WIFpCOf7cuoKPgOCGyyC2VheqosXGOctsg&s",
+  "video": "",
+  "category": "news",
+  "date": "2025-07-03",
+  "author": "B Times"
+},
+{
+  "id": 21,
+  "title": "Circular issued by Batroun Municipality for residents behind barriers",
+  "summary": "Starting from July 4, 2025, Electric barriers will begin operating throughout the town",
+  "content": "The Municipality of Batroun informs the residents of the area located beyond the electric barriers in the old district that the process of closing the barriers and controlling them remotely will begin on Friday, July 4, 2025.\n\nTherefore, you are kindly requested to ensure that your remote control devices in your vehicles are available and functioning properly to avoid any disruption in your movement.",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_WIFpCOf7cuoKPgOCGyyC2VheqosXGOctsg&s",
+  "video": "",
+  "category": "news",
+  "date": "2025-07-03",
+  "author": "B Times"
+},
+{
+  "id": 20,
+  "title": "Image: Airport Road is lit for the first time in years",
+  "summary": "After a long time of suffering by expatriates and Lebanese on the airport road, the road has been paved and lit again.",
+  "content": "",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYuIIvjSZvIsVfKa66N6K8KFHNiNgRAEUGXA&usqp=CAU",
+  "video": "",
+  "category": "news",
+  "date": "2025-07-03",
+  "author": "Elio Haydar"
+},
+{
   "id": 11,
   "title": "Batroun: A Coastal Gem with Modern Challenges and Rich Heritage",
   "summary": "Batroun today balances on a delicate axis: thriving as a staycation haven and economic lifeline, yet also vulnerable to environmental risks and caught in regional geopolitical tensions. Its blend of ancient charm and modern vibrancy continues to attract both locals and visitors—an uplifting counter-narrative amid Lebanon’s broader challenges",
