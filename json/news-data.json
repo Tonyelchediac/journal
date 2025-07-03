@@ -1,5 +1,16 @@
 {
   "articles": [
+{
+  "id": 20,
+  "title": "An Israeli drone targeted a vehicle on the Khaldeh highway.",
+  "summary": "The Israeli army: We carried out an airstrike targeting an operative working for Iran’s Quds Force who was involved in weapons smuggling in Lebanon",
+  "content": "",
+  "image": "https://yt3.googleusercontent.com/N213Qz0nmgEBNNWzbFNUp8BFC7C-N4Tc1TGgODnKr35Vq8hbePwMU7uxHRft3Guhzm8ABVv5JA=s900-c-k-c0x00ffffff-no-rj",
+  "video": "",
+  "category": "news",
+  "date": "2025-07-03",
+  "author": "B Times"
+},
     {
       "id": 21,
       "title": "Circular issued by Batroun Municipality for residents behind barriers",
