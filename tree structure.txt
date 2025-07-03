@@ -1,0 +1,28 @@
+newspapaer website
+    ├── index.html
+    ├── cc.html
+    ├── article.html
+    ├── events.html
+    ├── politics.html
+    ├── articles.html
+    ├── ads.html
+    ├── sport.html
+    ├── technology.html
+    ├── lifestyle.html
+    ├── games.html
+    ├── sale and rent.html
+    ├── health and science.html
+    ├── education and culture.html
+    ├── css
+    │   └── styles.css
+    ├── js
+    │   ├── script.js
+    │   ├── article.js
+    │   └── header-footer.js
+    ├── json
+    │   └── news-data.json
+    ├── images
+    │   └── ...
+    └── videos
+        └── ...
+

@@ -1,7 +1,7 @@
 // Function to load and display breaking news from local JSON file
 async function loadNewsData() {
     try {
-        const response = await fetch('js/news-data.json');
+        const response = await fetch('json/news-data.json');
         const data = await response.json();
         
         window.articlesData = data.articles;
@@ -225,7 +225,7 @@ async function loadArticle() {
     }
 
     try {
-        const response = await fetch('js/news-data.json');
+        const response = await fetch('json/news-data.json');
         const data = await response.json();
 
         const article = data.articles.find(a => a.id == articleId);
