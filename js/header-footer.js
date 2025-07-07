@@ -19,18 +19,18 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
             <nav>
                 <ul id="nav-list">
-                    <li><a href="#all" class="active">News</a></li>
-                    <li><a href="">Events</a></li>
-                    <li><a href="">Politics</a></li>
-                    <li><a href="">Articles</a></li>
-                    <li><a href="">Ads</a></li>
-                    <li><a href="">Sport</a></li>
-                    <li><a href="">Technology</a></li>
-                    <li><a href="">Lifestyle</a></li>
+                    <li><a href="index.html">News</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="politics.html">Politics</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                    <li><a href="ads.html">Ads</a></li>
+                    <li><a href="sports.html">Sport</a></li>
+                    <li><a href="technology.html">Technology</a></li>
+                    <li><a href="lifestyle.html">Lifestyle</a></li>
                     <li><a href="games.html">Games</a></li>
-                    <li><a href="">Sale and Rent</a></li>
-                    <li><a href="">Health and Science</a></li>
-                    <li><a href="">Education and Culture</a></li>
+                    <li><a href="sale-and-rent.html">Sale and Rent</a></li>
+                    <li><a href="health-and-science.html">Health and Science</a></li>
+                    <li><a href="education-and-culture.html">Education and Culture</a></li>
                 </ul>
             </nav>
             <div class="hamburger" id="hamburger">
@@ -86,7 +86,6 @@ footer.innerHTML = `
                 <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                 <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
                 <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
         <div class="footer-copyright">

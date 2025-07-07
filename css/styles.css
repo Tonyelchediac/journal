@@ -215,15 +215,17 @@ nav ul li a {
   text-decoration: none;
   font-size: var(--article-font-size);
   font-family: var(--font);
+  border-bottom: 2px solid transparent;
   padding: 0 10px;
-  border-radius: 25px;
   color: var(--color-primary);
   display: block;
+  transition: all 0.2s ease;
 }
 
 nav ul li a:hover,
 nav ul li a.active {
-  border-bottom: 2px solid var(--color-primary);
+  color: var(--color-secondary);
+  border-bottom: 2px solid var(--color-secondary);
   border-radius: 0;
 }
 
@@ -457,58 +459,6 @@ footer {
   color: var(--color-content);
 }
 
-.footer-newsletter {
-  margin: 20px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
-  max-width: 400px;
-}
-
-.footer-newsletter h3 {
-  font-size: var(--normal-font-size);
-  font-family: var(--font);
-  color: var(--color-content);
-  margin-bottom: 12px;
-  font-weight: 400;
-}
-
-.footer-newsletter form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 10px;
-}
-
-.footer-newsletter input{
-  border: 1px solid var(--color-primary);
-  flex: 1;
-  padding: 8px 10px;
-  border-radius: 6px;
-  font-size: 1rem;
-  outline: none;
-  font-family: inherit;
-}
-
-.footer-newsletter button {
-  padding: 8px 18px;
-  width: 50%;
-  background: var(--color-content);
-  color: var(--color-secondary);
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.footer-newsletter button:hover {
-  background: var(--color-primary);
-  color: var(--color-secondary);
-}
-
 .footer-social {
   margin: 0 0 1rem 0;
   display: flex;
@@ -623,13 +573,6 @@ nav ul.show {
 
 .to-day{
   font-size: 0.8rem;
-}
-
-.subcsription-button{
-  display: flex;
-  padding: 5px 10px;
-  font-weight: 700;
-  font-size: 0.7rem;
 }
 
   .footer-container {
@@ -859,5 +802,44 @@ nav ul.show {
   .related-articles-list {
     flex-direction: column;
     gap: 10px;
+  }
+}
+
+
+
+
+/* pages */
+.category-container {
+    max-width: 1500px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.category-header {
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+    border-bottom: 3px solid var(--color-content);
+}
+
+.category-title {
+  font-size: var(--medium-font-size);
+}
+
+.category-subtitle {
+    font-size: 1.2rem;
+    color: var(--first-background-color);
+    font-style: italic;
+}
+
+.loading {
+    text-align: center;
+    padding: 4rem 2rem;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+@media(max-width: 768px) {
+  .category-title{
+    font-size: var(--midnormal-font-size);
   }
 }
